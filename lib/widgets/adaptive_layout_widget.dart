@@ -5,7 +5,8 @@ class AdaptiveLayout extends StatelessWidget {
       {super.key,
       required this.mobileLayout,
       required this.tabletLayout,
-      required this.desktopLayout});
+      required this.desktopLayout
+      });
 
   final WidgetBuilder mobileLayout, tabletLayout, desktopLayout;
 
