@@ -3,8 +3,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_adaptive_app/utils/styles.dart';
 
 class UserInfoListTile extends StatelessWidget {
-  const UserInfoListTile({super.key, required this.image, required this.title, required this.subtitle});
   final String image , title , subtitle;
+  const UserInfoListTile({
+    super.key, 
+    required this.image, 
+    required this.title, 
+    required this.subtitle,
+    });
 
   @override
   Widget build(BuildContext context) {
