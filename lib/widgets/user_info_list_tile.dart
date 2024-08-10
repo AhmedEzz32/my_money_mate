@@ -4,12 +4,13 @@ import 'package:responsive_adaptive_app/utils/styles.dart';
 
 class UserInfoListTile extends StatelessWidget {
   final String image , title , subtitle;
+  
   const UserInfoListTile({
     super.key, 
     required this.image, 
     required this.title, 
     required this.subtitle,
-    });
+  });
 
   @override
   Widget build(BuildContext context) {
