@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive_app/models/all_expenses_item_model.dart';
 import 'package:responsive_adaptive_app/utils/styles.dart';
-import 'package:responsive_adaptive_app/widgets/all_expenses_item_header.dart';
+import 'package:responsive_adaptive_app/widgets/middle_screen/all_expenses/all_expenses_item_header.dart';
+import '../../../models/all_expenses_item_model.dart';
 
-class AllExpensesItem extends StatelessWidget {
+class ActiveExpensesItem extends StatefulWidget {
+  const ActiveExpensesItem({
+    super.key,
+    required this.itemModel,
+  });
+
   final AllExpensesItemModel itemModel;
 
-  const AllExpensesItem({super.key, required this.itemModel});
+  @override
+  State<ActiveExpensesItem> createState() => _ActiveExpensesItemState();
+}
 
+class _ActiveExpensesItemState extends State<ActiveExpensesItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,20 +30,20 @@ class AllExpensesItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AllExpensesItemHeader(image: itemModel.image),
+          AllExpensesItemHeader(image: widget.itemModel.image),
           const SizedBox(height: 34,),
           Text(
-            itemModel.title,
+            widget.itemModel.title,
             style: AppStyles.styleSemiBold16,
           ),    
           const SizedBox(height: 8,),      
           Text(
-            itemModel.date,
+            widget.itemModel.date,
             style: AppStyles.styleRegular14,
           ),   
           const SizedBox(height: 16,),        
           Text(
-            itemModel.price,
+            widget.itemModel.price,
             style: AppStyles.styleSemiBold24,
           ),
         ],

@@ -14,7 +14,7 @@ class DrawerItemListView extends StatefulWidget {
 
 class _DrawerItemListViewState extends State<DrawerItemListView> {
   
-  int selctedIndex = 0;
+  int selectedIndex = 0;
 
   final List<DrawerItemModel> items = [
     const DrawerItemModel(title: "DashBoard", image: Assets.imagesDashboard),
@@ -30,15 +30,15 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
       itemCount: items.length,
       itemBuilder: (BuildContext context, int index) => GestureDetector(
         onTap: (){
-          if(selctedIndex != index) {
+          if(selectedIndex != index) {
             setState(() {
-              selctedIndex = index;
+              selectedIndex = index;
             });
           }
         },
         child: DrawerItem(
           drawerItemModel: items[index],
-          isActive: selctedIndex == index,
+          isActive: selectedIndex == index,
         ),
       ),
       separatorBuilder: (BuildContext context, int index)=> const SizedBox(height: 20,),

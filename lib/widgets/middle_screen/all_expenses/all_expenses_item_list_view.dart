@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/models/all_expenses_item_model.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
-import 'package:responsive_adaptive_app/widgets/all_expenses_item.dart';
+import 'package:responsive_adaptive_app/widgets/middle_screen/all_expenses/all_expenses_item.dart';
 
-class AllExpensesItemListView extends StatelessWidget {
+class AllExpensesItemListView extends StatefulWidget {
 
   const AllExpensesItemListView({super.key});
 
@@ -29,17 +29,35 @@ class AllExpensesItemListView extends StatelessWidget {
   ];
 
   @override
+  State<AllExpensesItemListView> createState() => _AllExpensesItemListViewState();
+}
+
+class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
+  int selectedIndex = 0;
+
+  @override
   Widget build(BuildContext context) {
     return Row(
       // children: items.map((e) => Expanded(child: AllExpensesItem(itemModel: e))).toList(),
-      children: items.asMap().entries.map((e){
+      children: AllExpensesItemListView.items.asMap().entries.map((e){
         int index =  e.key;
         var item = e.value;
 
         return Expanded(
           child: Padding(
             padding: index == 1 ? const EdgeInsetsDirectional.symmetric(horizontal: 12) : EdgeInsetsDirectional.zero,
-            child: AllExpensesItem(itemModel: item),
+            child: GestureDetector(
+              onTap: (){
+                if(selectedIndex != index) {
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                }
+              },
+              child: AllExpensesItem(
+                itemModel: item , isSelected: selectedIndex == index,
+              )
+            ),
           )
         );
       }).toList(),
