@@ -20,10 +20,10 @@ class DashBoardDesktopLayout extends StatelessWidget {
           flex: 2,
           child: Column(
             children: [
-              AllExpenses()
+              AllExpenses(),
             ],
           ),
-        )
+        ),
       ],
     );
   }

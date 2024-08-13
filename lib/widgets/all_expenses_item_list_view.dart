@@ -9,7 +9,7 @@ class AllExpensesItemListView extends StatelessWidget {
 
   static const items = [
     AllExpensesItemModel(
-      image: Assets.imagesCardReceive, 
+      image: Assets.imagesBalance, 
       title: 'Balance',
       date: 'Augest 2024', 
       price: r'$20,129',
@@ -21,7 +21,7 @@ class AllExpensesItemListView extends StatelessWidget {
       price: r'$20,129',
     ),
     AllExpensesItemModel(
-      image: Assets.imagesCardReceive, 
+      image: Assets.imagesCardSend, 
       title: 'Expenses', 
       date: 'Augest 2024', 
       price: r'$20,129',
