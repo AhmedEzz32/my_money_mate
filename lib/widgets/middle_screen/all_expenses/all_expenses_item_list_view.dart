@@ -55,7 +55,8 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
                 }
               },
               child: AllExpensesItem(
-                itemModel: item , isSelected: selectedIndex == index,
+                itemModel: item, 
+                isSelected: selectedIndex == index,
               )
             ),
           )
