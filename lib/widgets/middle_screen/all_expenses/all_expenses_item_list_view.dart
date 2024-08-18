@@ -40,7 +40,7 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
     return Row(
       // children: items.map((e) => Expanded(child: AllExpensesItem(itemModel: e))).toList(),
       children: AllExpensesItemListView.items.asMap().entries.map((e){
-        int index =  e.key;
+        int index = e.key;
         var item = e.value;
 
         return Expanded(
