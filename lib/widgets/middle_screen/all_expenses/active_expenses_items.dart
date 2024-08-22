@@ -38,13 +38,13 @@ class _ActiveExpensesItemState extends State<ActiveExpensesItem> {
           Text(
             widget.itemModel.title,
             style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
-          ),    
+          ),
           const SizedBox(height: 8,),      
           Text(
             widget.itemModel.date,
             style: AppStyles.styleRegular14.copyWith(color:const Color(0xfffafafa)),
-          ),   
-          const SizedBox(height: 16,),        
+          ),
+          const SizedBox(height: 16,),
           Text(
             widget.itemModel.price,
             style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
