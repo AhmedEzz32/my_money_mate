@@ -18,9 +18,9 @@ class CustomDrawer extends StatelessWidget {
           SliverToBoxAdapter(
             child: UserInfoListTile(
               userInfoModel: UserInfoModel(
-                image: Assets.imagesAvatar1, 
-                title: 'Ahmed Ezz', 
-                subTitle: 'ahmedezz@gmail.com',
+                image: Assets.imagesAvatar1,
+                title: 'Ahmed Ezz',
+                subTitle: 'ahmed.mobiledev@gmail.com',
               ),
             ),
           ),
@@ -45,7 +45,7 @@ class CustomDrawer extends StatelessWidget {
 
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
-                    title: "Settings system", 
+                    title: "Settings system",
                     image: Assets.imagesDashboard,
                   ),
                 ),

@@ -15,8 +15,8 @@ class DrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return isActive 
-        ? ActiveDrawerItem(drawerItemModel: drawerItemModel) 
+    return isActive
+        ? ActiveDrawerItem(drawerItemModel: drawerItemModel)
         : InActiveDrawerItem(drawerItemModel: drawerItemModel);
   }
 }
