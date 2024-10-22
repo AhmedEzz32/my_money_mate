@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_adaptive_app/widgets/middle_screen/middle_screen_page.dart';
+import 'package:responsive_adaptive_app/widgets/right_screen/mycard/right_screen_page.dart';
 import '../widgets/drawer/custom_drawer.dart';
 
 class DashBoardDesktopLayout extends StatelessWidget {
@@ -19,6 +20,12 @@ class DashBoardDesktopLayout extends StatelessWidget {
         Expanded(
           flex: 2,
           child: MiddleScreenPage(),
+        ),
+        SizedBox(
+          width: 24,
+        ),
+        Expanded(
+          child: RightScreenPage(),
         ),
       ],
     );
