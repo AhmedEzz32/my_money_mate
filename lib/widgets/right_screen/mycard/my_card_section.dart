@@ -31,7 +31,7 @@ class _CardViewSectionState extends State<CardViewSection> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(
-          width: 420,
+          width: 320,
           child: Text(
             'My Card',
             style: AppStyles.styleSemiBold16
