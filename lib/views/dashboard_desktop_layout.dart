@@ -12,14 +12,14 @@ class DashBoardDesktopLayout extends StatelessWidget {
     return const Row(
       children: [
         Expanded(
-          child: CustomDrawer(),
+          child: SizedBox(),
         ),
         SizedBox(
           width: 32,
         ),
         Expanded(
           flex: 2,
-          child: MiddleScreenPage(),
+          child: SizedBox(),
         ),
         SizedBox(
           width: 24,

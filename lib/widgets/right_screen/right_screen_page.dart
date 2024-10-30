@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'income_section/income_section.dart';
 import 'my_card_and_transaction_history.dart';
 
 class RightScreenPage extends StatelessWidget {
@@ -6,8 +7,11 @@ class RightScreenPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: MyCardAndTransactionHistory(),
+    return const Column(
+      children: [
+        MyCardAndTransactionHistory(),
+        Expanded(child: IncomeSection()),
+      ],
     );
   }
 }

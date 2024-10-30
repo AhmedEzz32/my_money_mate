@@ -8,13 +8,15 @@ class AllExpensesHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           'all expenses',
           style: AppStyles.styleSemiBold20,
         ),
-        Spacer(),
-        RangeOptions()
+        RangeOptions(
+          text: 'Monthly',
+        ),
       ],
     );
   }
