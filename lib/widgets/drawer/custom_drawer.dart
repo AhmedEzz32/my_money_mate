@@ -53,7 +53,7 @@ class CustomDrawer extends StatelessWidget {
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
                     title: "LogOut Account", 
-                    image: Assets.imagesMyTransaction,
+                    image: Assets.imagesLogout,
                   ),
                 ),
 

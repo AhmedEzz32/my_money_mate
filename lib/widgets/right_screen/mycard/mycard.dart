@@ -36,7 +36,7 @@ class MyCard extends StatelessWidget {
                     color: Colors.white,
                   )),
               subtitle: const Text(
-                'Syah Bandi',
+                'Ahmed Ezz',
                 style: AppStyles.styleMedium18,
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),

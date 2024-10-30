@@ -7,11 +7,19 @@ class RightScreenPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        MyCardAndTransactionHistory(),
-        Expanded(child: IncomeSection()),
-      ],
+    return const SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 24),
+        child: Column(
+          children: [
+            MyCardAndTransactionHistory(),
+            SizedBox(
+              height: 24,
+            ),
+            IncomeSection(),
+          ],
+        ),
+      ),
     );
   }
 }

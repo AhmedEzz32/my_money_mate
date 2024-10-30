@@ -10,13 +10,15 @@ class MiddleScreenPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
-      child: Column(
-        children: [
-          SizedBox(height: 40,),
-          AllExpenses(),
-          SizedBox(height: 24,),
-          QuickInvoice(),
-        ],
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 24),
+        child: Column(
+          children: [
+            AllExpenses(),
+            SizedBox(height: 24,),
+            QuickInvoice(),
+          ],
+        ),
       ),
     );
   }
