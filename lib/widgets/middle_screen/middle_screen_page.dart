@@ -3,22 +3,22 @@ import 'all_expenses/all_expenses.dart';
 import 'quick_invoice/transaction/quick_invoice.dart';
 
 class MiddleScreenPage extends StatelessWidget {
+  final double? verticalPadding;
   const MiddleScreenPage({
     super.key,
+    this.verticalPadding,
   });
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 24),
-        child: Column(
-          children: [
-            AllExpenses(),
-            SizedBox(height: 24,),
-            QuickInvoice(),
-          ],
-        ),
+    return  Padding(
+      padding: EdgeInsets.symmetric(vertical: verticalPadding ?? 24),
+      child: const Column(
+        children: [
+          AllExpenses(),
+          SizedBox(height: 24,),
+          QuickInvoice(),
+        ],
       ),
     );
   }
