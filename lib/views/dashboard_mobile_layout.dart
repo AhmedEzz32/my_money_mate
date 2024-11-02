@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/widgets/middle_screen/middle_screen_page.dart';
 import '../widgets/right_screen/right_screen_page.dart';
 
@@ -17,6 +17,9 @@ class DashboardMobileLayout extends StatelessWidget {
             height: 24,
           ),
           RightScreenPage(),
+          SizedBox(
+            height: 24,
+          ),
         ],
       ),
     );
