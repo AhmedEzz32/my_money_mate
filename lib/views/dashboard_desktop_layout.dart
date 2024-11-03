@@ -40,7 +40,8 @@ class DashBoardDesktopLayout extends StatelessWidget {
               )
             ],
           ),
-        ),      ],
+        ),
+      ],
     );
   }
 }
