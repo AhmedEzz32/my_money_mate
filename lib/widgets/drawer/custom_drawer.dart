@@ -58,7 +58,7 @@ class CustomDrawer extends StatelessWidget {
                   ),
                 ),
 
-                SizedBox(height: 48,),
+                Flexible(child: SizedBox(height: 48,)),
               ],
             ),
           )

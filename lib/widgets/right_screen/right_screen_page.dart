@@ -9,14 +9,16 @@ class RightScreenPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.symmetric(vertical: 24),
-      child: Column(
-        children: [
-          MyCardAndTransactionHistory(),
-          SizedBox(
-            height: 24,
-          ),
-          IncomeSection(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            MyCardAndTransactionHistory(),
+            SizedBox(
+              height: 24,
+            ),
+            IncomeSection(),
+          ],
+        ),
       ),
     );
   }

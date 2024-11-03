@@ -43,9 +43,9 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
         int index = e.key;
         var item = e.value;
 
-        return Expanded(
+        return Flexible(
           child: Padding(
-            padding: index == 1 ? const EdgeInsetsDirectional.symmetric(horizontal: 12) : EdgeInsetsDirectional.zero,
+            padding: const EdgeInsetsDirectional.symmetric(horizontal: 10),
             child: GestureDetector(
               onTap: (){
                 if(selectedIndex != index) {

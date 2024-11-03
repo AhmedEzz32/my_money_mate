@@ -19,7 +19,7 @@ class _ActiveExpensesItemState extends State<ActiveExpensesItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsetsDirectional.symmetric(horizontal: 20 , vertical: 16),
+      padding:  EdgeInsetsDirectional.symmetric(horizontal: MediaQuery.sizeOf(context).width * 0.020 , vertical: MediaQuery.sizeOf(context).height * 0.016),
       decoration: const ShapeDecoration(
         color: Color(0xff4EB7F2),
         shape: RoundedRectangleBorder(
@@ -35,19 +35,31 @@ class _ActiveExpensesItemState extends State<ActiveExpensesItem> {
             imageColor: Colors.white,
           ),
           const SizedBox(height: 34,),
-          Text(
-            widget.itemModel.title,
-            style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
+          FittedBox(
+            alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              widget.itemModel.title,
+              style: AppStyles.styleSemiBold16(context).copyWith(color: Colors.white),
+            ),
           ),
           const SizedBox(height: 8,),      
-          Text(
-            widget.itemModel.date,
-            style: AppStyles.styleRegular14.copyWith(color:const Color(0xfffafafa)),
+          FittedBox(
+            alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              widget.itemModel.date,
+              style: AppStyles.styleRegular14(context).copyWith(color:const Color(0xfffafafa)),
+            ),
           ),
           const SizedBox(height: 16,),
-          Text(
-            widget.itemModel.price,
-            style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+          FittedBox(
+            alignment: AlignmentDirectional.centerStart,
+            fit: BoxFit.scaleDown,
+            child: Text(
+              widget.itemModel.price,
+              style: AppStyles.styleSemiBold24(context).copyWith(color: Colors.white),
+            ),
           ),
         ],
       ),

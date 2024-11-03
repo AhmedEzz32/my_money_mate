@@ -26,7 +26,7 @@ class RangeOptions extends StatelessWidget {
         children: [
           Text(
             text,
-            style: AppStyles.styleSemiBold14,
+            style: AppStyles.styleSemiBold14(context),
           ),
           const SizedBox(width: 4),
           Transform.rotate(

@@ -8,16 +8,16 @@ class IncomeSectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(vertical: 8),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             'income',
-            style: AppStyles.styleSemiBold18,
+            style: AppStyles.styleSemiBold18(context),
           ),
-          RangeOptions(
+          const RangeOptions(
             text: 'Monthly',
           ),
         ],
