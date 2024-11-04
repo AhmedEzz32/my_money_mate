@@ -11,6 +11,7 @@ class RightScreenPage extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 24),
       child: SingleChildScrollView(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             MyCardAndTransactionHistory(),
             SizedBox(

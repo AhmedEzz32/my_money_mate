@@ -45,7 +45,7 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
 
         return Flexible(
           child: Padding(
-            padding: const EdgeInsetsDirectional.symmetric(horizontal: 10),
+            padding: EdgeInsetsDirectional.symmetric(horizontal: MediaQuery.sizeOf(context).width * 0.01),
             child: GestureDetector(
               onTap: (){
                 if(selectedIndex != index) {

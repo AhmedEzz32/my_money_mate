@@ -36,8 +36,8 @@ class DashBoardDesktopLayout extends StatelessWidget {
                       child: RightScreenPage(),
                     ),
                   ],
-            ),
-              )
+                ),
+              ),
             ],
           ),
         ),
