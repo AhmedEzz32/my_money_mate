@@ -46,6 +46,10 @@ class Assets {
   /// assets/images/my_investment.svg
   static const String imagesMyInvestment = "assets/images/my_investment.svg";
 
+  /// Assets for imagesMyMoneyMate 
+  /// assets/images/my_money_mate .webp
+  static const String imagesMyMoneyMate  = "assets/images/my_money_mate.webp";
+
   /// Assets for imagesMyTransaction
   /// assets/images/my_transaction.svg
   static const String imagesMyTransaction = "assets/images/my_transaction.svg";

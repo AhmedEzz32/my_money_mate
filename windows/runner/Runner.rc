@@ -92,10 +92,10 @@ BEGIN
             VALUE "CompanyName", "com.4exper" "\0"
             VALUE "FileDescription", "A new Flutter project." "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "Cairo Photo Club" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2021 cairophotoclub.com All rights reserved." "\0"
+            VALUE "InternalName", "MyMoneyMate" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2021 MyMoneyMate.com All rights reserved." "\0"
             VALUE "OriginalFilename", "cpc.exe" "\0"
-            VALUE "ProductName", "Cairo Photo Club" "\0"
+            VALUE "ProductName", "MyMoneyMate" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

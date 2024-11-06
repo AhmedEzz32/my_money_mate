@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/utils/styles.dart';
 
-class RangeOptions extends StatelessWidget {
+class RangeOptions extends StatefulWidget {
   final String text;
   const RangeOptions({
     super.key, 
     required this.text,
   });
 
+  @override
+  State<RangeOptions> createState() => _RangeOptionsState();
+}
+
+class _RangeOptionsState extends State<RangeOptions> {
+  String dropdownValue = 'Daily';
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -24,18 +30,32 @@ class RangeOptions extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(
-            text,
-            style: AppStyles.styleSemiBold14(context),
-          ),
-          const SizedBox(width: 4),
-          Transform.rotate(
-            angle: -1.5707963267949,
-            child: const Icon(
-              Icons.arrow_back_ios_rounded,
-              size: 16,
+          DropdownButton<String>(
+            value: dropdownValue,
+            icon: const Icon(
+              Icons.arrow_drop_down_rounded,
+              size: 24,
               color: Color(0xff064061),
             ),
+            iconSize: 24,
+            elevation: 16,
+            style: AppStyles.styleSemiBold14(context),
+            underline: Container(
+              height: 0,
+              color: Colors.transparent,
+            ),
+            onChanged: (String? newValue) {
+              setState(() {
+                dropdownValue = newValue!;
+              });
+            },
+            items: <String>['Daily', 'Weekly', 'Monthly', 'Yearly']
+                .map<DropdownMenuItem<String>>((String value) {
+              return DropdownMenuItem<String>(
+                value: value,
+                child: Text(value),
+              );
+            }).toList(),
           ),
         ],
       ),

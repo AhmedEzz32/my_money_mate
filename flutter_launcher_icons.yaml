@@ -1,0 +1,28 @@
+# flutter pub run flutter_launcher_icons
+flutter_launcher_icons:
+  image_path: "assets/images/my_money_mate.webp"
+
+  android:
+    generate: true
+    min_sdk_android: 21 # android min sdk min:16, default 21
+    # adaptive_icon_background: "assets/images/my_money_mate.webp"
+    # adaptive_icon_foreground: "assets/images/my_money_mate.webp"
+    # adaptive_icon_monochrome: "assets/images/my_money_mate.webp"
+
+  ios:
+    generate: true
+    # image_path_ios_dark_transparent: "assets/images/my_money_mate.webp"
+    # image_path_ios_tinted_grayscale: "assets/images/my_money_mate.webp"
+    # desaturate_tinted_to_grayscale_ios: true
+
+  web:
+    generate: true
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+
+  windows:
+    generate: true
+    icon_size: 48 # min:48, max:256, default: 48
+
+  macos:
+    generate: true

@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:label="responsive_adaptive_app"
+        android:label="MyMoneyMate"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

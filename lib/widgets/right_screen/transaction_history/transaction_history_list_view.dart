@@ -3,7 +3,8 @@ import 'package:responsive_adaptive_app/widgets/right_screen/transaction_history
 import 'package:responsive_adaptive_app/widgets/right_screen/transaction_history/transaction_model.dart';
 
 class TransactionHistoryListView extends StatelessWidget {
-  const TransactionHistoryListView({super.key});
+  final bool showAll;
+  const TransactionHistoryListView({super.key, required this.showAll});
 
   static const items = [
     TransactionModel(
@@ -29,10 +30,7 @@ class TransactionHistoryListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: List.generate(
-        items.length,
-        (index) => TransactionItem(transactionModel: items[index]),
-      ),
+      children: (showAll ? items : items.take(1)).map((e) => TransactionItem(transactionModel: e)).toList(),
     );
     
     // return ListView.builder(
