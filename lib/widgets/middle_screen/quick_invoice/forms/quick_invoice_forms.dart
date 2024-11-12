@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import '../transaction/title_text_field.dart';
 import 'custom_button.dart';
 
@@ -9,19 +10,19 @@ class QuickInvoiceForms extends StatelessWidget {
   Widget build(BuildContext context) {
     const sizedBoxWidth = SizedBox(width: 16,);
     const sizedBoxHeight = SizedBox(height: 24,);
-    return const Column(
+    return Column(
       children: [
         Row(
           children: [
             Expanded(
               child: TitleTextField(
-                title: 'Customer name', hint: 'Type customer name'
+                title: S.current.customer_name, hint: S.current.type_customer_name,
               ),
             ),
             sizedBoxWidth,            
             Expanded(
               child: TitleTextField(
-                title: 'Customer email', hint: 'Type customer email',
+                title: S.current.customer_email, hint: S.current.type_customer_email,
               ),
             ),
           ],
@@ -31,13 +32,13 @@ class QuickInvoiceForms extends StatelessWidget {
           children: [
             Expanded(
               child: TitleTextField(
-                title: 'Item name', hint: 'Type item name'
+                title: S.current.item_name, hint: S.current.type_item_name,
               ),
             ),
             sizedBoxWidth,
             Expanded(
               child: TitleTextField(
-                title: 'Item mount', hint: 'USD',
+                title: S.current.item_amount , hint: S.current.usd,
               ),
             ),
           ],
@@ -47,14 +48,14 @@ class QuickInvoiceForms extends StatelessWidget {
           children: [
             Expanded(
               child: CustomButton(
-                text: 'Add more details',
+                text: S.current.add_more_details,
                 backgroundColor: Colors.transparent,
-                textColor: Color(0xff4db7f2),
+                textColor: const Color(0xff4db7f2),
               ),
             ),
-            SizedBox(width: 12,),
+            const SizedBox(width: 12,),
             Expanded(
-              child: CustomButton(text: 'Send money',),
+              child: CustomButton(text: S.current.send_money,),
             ),
           ],
         ),

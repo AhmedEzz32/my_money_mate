@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/models/all_expenses_item_model.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'package:responsive_adaptive_app/widgets/middle_screen/all_expenses/all_expenses_item.dart';
 
 class AllExpensesItemListView extends StatefulWidget {
 
   const AllExpensesItemListView({super.key});
 
-  static const items = [
+  static List<AllExpensesItemModel> items = [
     AllExpensesItemModel(
       image: Assets.imagesBalance, 
-      title: 'Balance',
-      date: 'Augest 2024', 
-      price: r'$20,129',
+      title: S.current.balance,
+      date: S.current.augest_2024, 
+      price: S.current.dollar_20_129,
     ),
     AllExpensesItemModel(
       image: Assets.imagesCardReceive, 
-      title: 'Income', 
-      date: 'Augest 2024', 
-      price: r'$20,129',
+      title: S.current.income, 
+      date: S.current.augest_2024,
+      price: S.current.dollar_20_129,
     ),
     AllExpensesItemModel(
       image: Assets.imagesCardSend, 
-      title: 'Expenses', 
-      date: 'Augest 2024', 
-      price: r'$20,129',
+      title: S.current.expenses, 
+      date: S.current.augest_2024,
+      price: S.current.dollar_20_129,
     ),
   ];
 

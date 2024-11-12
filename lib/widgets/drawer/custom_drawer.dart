@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/models/drawer_item_model.dart';
 import 'package:responsive_adaptive_app/models/user_info_model.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'package:responsive_adaptive_app/widgets/drawer/inactive_drawer_item.dart';
 import 'package:responsive_adaptive_app/widgets/drawer/user_info_list_tile.dart';
 import 'drawer_item_list_view.dart';
@@ -14,31 +15,31 @@ class CustomDrawer extends StatelessWidget {
     return Container(
       width: MediaQuery.sizeOf(context).width * 0.5,
       color: Colors.white,
-      child: const CustomScrollView(
+      child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: UserInfoListTile(
               userInfoModel: UserInfoModel(
                 image: Assets.imagesAvatar1,
-                title: 'Ahmed Ezz',
+                title: S.current.ahmed_ezz,
                 subTitle: 'ahmed.mobiledev@gmail.com',
               ),
             ),
           ),
 
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SizedBox(
               height: 8,
             ),
           ),
 
-          DrawerItemListView(),
+          const DrawerItemListView(),
 
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
-                Expanded(
+                const Expanded(
                   child: SizedBox(
                     height: 20,
                   ),
@@ -46,19 +47,19 @@ class CustomDrawer extends StatelessWidget {
 
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
-                    title: "Settings system",
+                    title: S.current.settings,
                     image: Assets.imagesDashboard,
                   ),
                 ),
 
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
-                    title: "LogOut Account", 
+                    title: S.current.logout, 
                     image: Assets.imagesLogout,
                   ),
                 ),
 
-                Flexible(child: SizedBox(height: 48,)),
+                const Flexible(child: SizedBox(height: 48,)),
               ],
             ),
           )

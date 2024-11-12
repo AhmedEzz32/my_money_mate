@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'package:responsive_adaptive_app/widgets/right_screen/income_section/item_details_model.dart';
 import 'item_details.dart';
 
 class IncomeDetails extends StatelessWidget {
   const IncomeDetails({super.key});
 
-  static const itemDetails = [
+  static List<ItemDetailsModel> itemDetails = [
     ItemDetailsModel(
-      color: Color(0xff208bc7),
-      title: 'Design service',
+      color: const Color(0xff208bc7),
+      title: S.current.design_serice,
       value: '40%',
     ),
     ItemDetailsModel(
-      color: Color(0xff4db7f2),
-      title: 'Design Product',
+      color: const Color(0xff4db7f2),
+      title: S.current.design_product,
       value: '25%',
     ),
     ItemDetailsModel(
-      color: Color(0xff064060),
-      title: 'Product Royalty',
+      color: const Color(0xff064060),
+      title: S.current.product_royalty,
       value: '20%',
     ),    
     ItemDetailsModel(
-      color: Color(0xffe2decd),
-      title: 'Other',
+      color: const Color(0xffe2decd),
+      title: S.current.other,
       value: '22%',
     ),
   ];

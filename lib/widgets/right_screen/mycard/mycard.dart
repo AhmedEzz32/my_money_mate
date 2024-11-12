@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
 import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
@@ -29,21 +30,21 @@ class MyCard extends StatelessWidget {
           children: [ 
             ListTile(
               contentPadding:
-                  const EdgeInsets.only(left: 21, right: 32, top: 6),
+                  const EdgeInsetsDirectional.only(start: 21, end: 32, top: 6),
               title: Text(
-                  'Name card',
+                  S.current.name_card,
                   style: AppStyles.styleRegular14(context).copyWith(
                     color: Colors.white,
                   )),
               subtitle: Text(
-                'Ahmed Ezz',
+                S.current.ahmed_ezz,
                 style: AppStyles.styleMedium18(context),
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
             const Expanded(child: SizedBox()),
             Padding(
-              padding: const EdgeInsets.only(right: 48 - 24),
+              padding: const EdgeInsetsDirectional.only(end: 48 - 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [

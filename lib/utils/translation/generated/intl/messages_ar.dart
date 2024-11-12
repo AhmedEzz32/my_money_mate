@@ -21,5 +21,65 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "add_more_details":
+            MessageLookupByLibrary.simpleMessage("إضافة المزيد من التفاصيل"),
+        "ahmed_ezz": MessageLookupByLibrary.simpleMessage("أحمد عز"),
+        "all_expenses": MessageLookupByLibrary.simpleMessage("جميع المصروفات"),
+        "augest_2024": MessageLookupByLibrary.simpleMessage("أغسطس 2024"),
+        "balance": MessageLookupByLibrary.simpleMessage("الرصيد"),
+        "cash_deposit": MessageLookupByLibrary.simpleMessage("إيداع نقدي"),
+        "cash_withdrawal": MessageLookupByLibrary.simpleMessage("سحب نقدي"),
+        "customer_email": MessageLookupByLibrary.simpleMessage("بريد العميل"),
+        "customer_name": MessageLookupByLibrary.simpleMessage("اسم العميل"),
+        "daily": MessageLookupByLibrary.simpleMessage("يومي"),
+        "dashboard": MessageLookupByLibrary.simpleMessage("لوحة القيادة"),
+        "design_product": MessageLookupByLibrary.simpleMessage("تصميم المنتج"),
+        "design_serice": MessageLookupByLibrary.simpleMessage("خدمة التصميم"),
+        "design_service": MessageLookupByLibrary.simpleMessage("خدمة التصميم"),
+        "dollar_20_129": MessageLookupByLibrary.simpleMessage("20.129 دولار"),
+        "expenses": MessageLookupByLibrary.simpleMessage("المصروفات"),
+        "income": MessageLookupByLibrary.simpleMessage("الدخل"),
+        "item_amount": MessageLookupByLibrary.simpleMessage("كمية العنصر"),
+        "item_name": MessageLookupByLibrary.simpleMessage("اسم العنصر"),
+        "juni_mobile_app":
+            MessageLookupByLibrary.simpleMessage("تطبيق جوني المحمول"),
+        "khaled_ezz": MessageLookupByLibrary.simpleMessage("خالد عز"),
+        "landing_page": MessageLookupByLibrary.simpleMessage("صفحة الهبوط"),
+        "latest_transactions":
+            MessageLookupByLibrary.simpleMessage("أحدث المعاملات"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "monthly": MessageLookupByLibrary.simpleMessage("شهري"),
+        "my_card": MessageLookupByLibrary.simpleMessage("بطاقتي"),
+        "my_investment": MessageLookupByLibrary.simpleMessage("استثماري"),
+        "my_transactions": MessageLookupByLibrary.simpleMessage("معاملاتي"),
+        "name_card": MessageLookupByLibrary.simpleMessage("اسم البطاقة"),
+        "osama_ezz": MessageLookupByLibrary.simpleMessage("أسامة عز"),
+        "other": MessageLookupByLibrary.simpleMessage("آخر"),
+        "payment": MessageLookupByLibrary.simpleMessage("دفع"),
+        "product_royalty": MessageLookupByLibrary.simpleMessage("عائد المنتج"),
+        "quick_invoice": MessageLookupByLibrary.simpleMessage("فاتورة سريعة"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "see_all": MessageLookupByLibrary.simpleMessage("رؤية المزيد"),
+        "see_less": MessageLookupByLibrary.simpleMessage("رؤية أقل"),
+        "send_money": MessageLookupByLibrary.simpleMessage("إرسال المال"),
+        "settings": MessageLookupByLibrary.simpleMessage("الإعدادات"),
+        "statistics": MessageLookupByLibrary.simpleMessage("إحصائيات"),
+        "transfer": MessageLookupByLibrary.simpleMessage("نقل"),
+        "translation_history":
+            MessageLookupByLibrary.simpleMessage("تاريخ الترجمة"),
+        "translation_history_description":
+            MessageLookupByLibrary.simpleMessage("عرض تاريخ جميع الترجمات"),
+        "type_customer_email":
+            MessageLookupByLibrary.simpleMessage("اكتب بريد العميل"),
+        "type_customer_name":
+            MessageLookupByLibrary.simpleMessage("اكتب اسم العميل"),
+        "type_item_name":
+            MessageLookupByLibrary.simpleMessage("اكتب اسم العنصر"),
+        "usd": MessageLookupByLibrary.simpleMessage("دولار"),
+        "wallet_account": MessageLookupByLibrary.simpleMessage("حساب المحفظة"),
+        "weekly": MessageLookupByLibrary.simpleMessage("أسبوعي"),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحبا"),
+        "yearly": MessageLookupByLibrary.simpleMessage("سنوي")
+      };
 }

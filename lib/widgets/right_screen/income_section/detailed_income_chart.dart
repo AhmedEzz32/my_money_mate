@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 
 class DetailedIncomeChart extends StatefulWidget {
   const DetailedIncomeChart({super.key});
@@ -33,7 +34,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
       sections: [
         PieChartSectionData(
           titlePositionPercentageOffset: activeIndex == 0 ? 1.5 : null,
-          title: activeIndex == 0 ? 'Design service' : '40%',
+          title: activeIndex == 0 ? S.current.design_service : '40%',
           titleStyle: AppStyles.styleMedium14(context)
               .copyWith(color: activeIndex == 0 ? null : Colors.white),
           radius: activeIndex == 0 ? 60 : 50,
@@ -44,7 +45,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           titlePositionPercentageOffset: activeIndex == 1 ? 2.0 : null,
           titleStyle: AppStyles.styleMedium14(context)
               .copyWith(color: activeIndex == 1 ? null : Colors.white),
-          title: activeIndex == 1 ? 'Design product' : '25%',
+          title: activeIndex == 1 ? S.current.design_product : '25%',
           value: 25,
           radius: activeIndex == 1 ? 60 : 50,
           color: const Color(0xFF4DB7F2),
@@ -53,7 +54,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           titlePositionPercentageOffset: activeIndex == 2 ? 1.4 : null,
           titleStyle: AppStyles.styleMedium14(context)
               .copyWith(color: activeIndex == 2 ? null : Colors.white),
-          title: activeIndex == 2 ? 'Product royalty' : '20%',
+          title: activeIndex == 2 ? S.current.product_royalty : '20%',
           value: 20,
           radius: activeIndex == 2 ? 60 : 50,
           color: const Color(0xFF064060),
@@ -62,7 +63,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
           titlePositionPercentageOffset: activeIndex == 3 ? 1.4 : null,
           titleStyle: AppStyles.styleMedium14(context)
               .copyWith(color: activeIndex == 3 ? null : Colors.white),
-          title: activeIndex == 3 ? 'Other' : '22%',
+          title: activeIndex == 3 ? S.current.other : '22%',
           value: 22,
           radius: activeIndex == 3 ? 60 : 50,
           color: const Color(0xFFE2DECD),

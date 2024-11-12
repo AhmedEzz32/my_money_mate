@@ -1,39 +1,40 @@
 import 'package:flutter/widgets.dart';
 import 'package:responsive_adaptive_app/models/user_info_model.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'package:responsive_adaptive_app/widgets/drawer/user_info_list_tile.dart';
 
 class LatestTransactionListView extends StatelessWidget {
 
-  static const items = [
+  static var items = [
     UserInfoModel(
       image: Assets.imagesAvatar1,
-      title: 'Khaled Ezz',
+      title: S.current.khaled_ezz,
       subTitle: 'khaledezz@gmail.com',
     ),    
     UserInfoModel(
       image: Assets.imagesAvatar2,
-      title: 'Osama Ezz',
+      title: S.current.osama_ezz,
       subTitle: 'osamaezz@gmail.com',
     ),    
     UserInfoModel(
       image: Assets.imagesAvatar3,
-      title: 'Ahmed Ezz',
+      title: S.current.ahmed_ezz,
       subTitle: 'ahmedezz@gmail.com',
     ),    
     UserInfoModel(
       image: Assets.imagesAvatar1,
-      title: 'Khaled Ezz',
+      title: S.current.khaled_ezz,
       subTitle: 'khaledezz@gmail.com',
     ),    
     UserInfoModel(
       image: Assets.imagesAvatar2,
-      title: 'Osama Ezz',
+      title: S.current.osama_ezz,
       subTitle: 'osamaezz@gmail.com',
     ),    
     UserInfoModel(
       image: Assets.imagesAvatar3,
-      title: 'Ahmed Ezz',
+      title: S.current.ahmed_ezz,
       subTitle: 'ahmedezz@gmail.com',
     ),
   ];

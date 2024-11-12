@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 
 class QuickInvoiceHeader extends StatelessWidget {
   const QuickInvoiceHeader({super.key});
@@ -9,7 +10,7 @@ class QuickInvoiceHeader extends StatelessWidget {
     return Row(
       children: [
         Text(
-          "Quick Invoice",
+          S.current.quick_invoice,
           style: AppStyles.styleSemiBold20(context),
         ),
         const Spacer(),

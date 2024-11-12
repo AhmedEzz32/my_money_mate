@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import '../forms/quick_invoice_forms.dart';
 import 'latest_transaction_list_view.dart';
 
@@ -12,7 +13,7 @@ class LatestTransaction extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Latest Transaction',
+          S.current.latest_transactions,
           style: AppStyles.styleMedium16(context),
         ),
         const LatestTransactionListView(),

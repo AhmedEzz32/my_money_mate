@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import '../../drawer/range_options.dart';
 
 class IncomeSectionHeader extends StatelessWidget {
@@ -14,11 +15,11 @@ class IncomeSectionHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'income',
+            S.current.income,
             style: AppStyles.styleSemiBold18(context),
           ),
-          const RangeOptions(
-            text: 'Monthly',
+          RangeOptions(
+            text: S.current.monthly,
           ),
         ],
       ),

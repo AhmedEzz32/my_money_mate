@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive_app/core/l10n/generated/l10n.dart';
 import 'package:responsive_adaptive_app/utils/services/settings_service.dart';
 import 'package:responsive_adaptive_app/utils/services/storage_service.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'views/dashboard_view.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 

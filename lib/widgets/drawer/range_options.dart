@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 
 class RangeOptions extends StatefulWidget {
   final String text;
@@ -49,8 +50,12 @@ class _RangeOptionsState extends State<RangeOptions> {
                 dropdownValue = newValue!;
               });
             },
-            items: <String>['Daily', 'Weekly', 'Monthly', 'Yearly']
-                .map<DropdownMenuItem<String>>((String value) {
+            items: <String>[
+              S.current.daily, 
+              S.current.weekly, 
+              S.current.monthly, 
+              S.current.yearly,
+            ].map<DropdownMenuItem<String>>((String value) {
               return DropdownMenuItem<String>(
                 value: value,
                 child: Text(value),

@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 
 class MyTransactionHeader extends StatelessWidget {
   final bool showAll;
@@ -16,7 +17,7 @@ class MyTransactionHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'Transaction History',
+          S.current.translation_history,
           style: AppStyles.styleSemiBold18(context),
         ),
         GestureDetector(
@@ -24,7 +25,7 @@ class MyTransactionHeader extends StatelessWidget {
           child: MouseRegion(
             cursor: SystemMouseCursors.click,
             child: Text(
-              showAll ? 'See Less' : 'See all',
+              showAll ? S.current.see_less : S.current.see_all,
               style: AppStyles.styleMedium14(context).copyWith(
                 color: const Color(0xff4eb7f2),
               ),
