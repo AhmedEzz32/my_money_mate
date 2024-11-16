@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_adaptive_app/models/drawer_item_model.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 
 class ActiveDrawerItem extends StatelessWidget {
 
@@ -21,13 +21,15 @@ class ActiveDrawerItem extends StatelessWidget {
         fit: BoxFit.scaleDown,
         child: Text(
           drawerItemModel.title,
-          style: AppStyles.styleBold16(context),
+          style: Themes(context).theme.primary.h1.copyWith(
+            color: Themes(context).theme.colors.primary,
+          ),
         ),
       ),
       trailing: Container(
         width: 3.27,
-        decoration: const BoxDecoration(
-          color:Color(0xff4EB7f2),
+        decoration: BoxDecoration(
+          color: Themes(context).theme.colors.primary,
         ),
       ),
     );

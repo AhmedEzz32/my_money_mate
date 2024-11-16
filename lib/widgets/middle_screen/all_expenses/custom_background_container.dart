@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 
 class CustomBackgroundContainer extends StatelessWidget {
 
@@ -16,7 +17,7 @@ class CustomBackgroundContainer extends StatelessWidget {
     return Container(
       padding: EdgeInsetsDirectional.all(padding ?? 20),
       decoration: ShapeDecoration(
-        color: Colors.white,
+        color: Themes(context).theme.colors.background,
         shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       )),

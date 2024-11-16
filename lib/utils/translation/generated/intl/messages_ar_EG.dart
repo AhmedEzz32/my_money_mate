@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a ar locale. All the
+// This is a library that provides messages for a ar_EG locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,7 +18,7 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'ar';
+  String get localeName => 'ar_EG';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إضافة المزيد من التفاصيل"),
         "ahmed_ezz": MessageLookupByLibrary.simpleMessage("أحمد عز"),
         "all_expenses": MessageLookupByLibrary.simpleMessage("جميع المصروفات"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "augest_2024": MessageLookupByLibrary.simpleMessage("أغسطس 2024"),
         "balance": MessageLookupByLibrary.simpleMessage("الرصيد"),
         "cash_deposit": MessageLookupByLibrary.simpleMessage("إيداع نقدي"),
@@ -33,11 +34,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "customer_email": MessageLookupByLibrary.simpleMessage("بريد العميل"),
         "customer_name": MessageLookupByLibrary.simpleMessage("اسم العميل"),
         "daily": MessageLookupByLibrary.simpleMessage("يومي"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("الوضع الداكن"),
         "dashboard": MessageLookupByLibrary.simpleMessage("لوحة القيادة"),
         "design_product": MessageLookupByLibrary.simpleMessage("تصميم المنتج"),
         "design_serice": MessageLookupByLibrary.simpleMessage("خدمة التصميم"),
         "design_service": MessageLookupByLibrary.simpleMessage("خدمة التصميم"),
         "dollar_20_129": MessageLookupByLibrary.simpleMessage("20.129 دولار"),
+        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "expenses": MessageLookupByLibrary.simpleMessage("المصروفات"),
         "income": MessageLookupByLibrary.simpleMessage("الدخل"),
         "item_amount": MessageLookupByLibrary.simpleMessage("كمية العنصر"),
@@ -48,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "landing_page": MessageLookupByLibrary.simpleMessage("صفحة الهبوط"),
         "latest_transactions":
             MessageLookupByLibrary.simpleMessage("أحدث المعاملات"),
+        "light_mode": MessageLookupByLibrary.simpleMessage("الوضع الفاتح"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "monthly": MessageLookupByLibrary.simpleMessage("شهري"),
         "my_card": MessageLookupByLibrary.simpleMessage("بطاقتي"),

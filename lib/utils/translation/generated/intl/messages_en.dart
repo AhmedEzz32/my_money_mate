@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Add More Details"),
         "ahmed_ezz": MessageLookupByLibrary.simpleMessage("Ahmed Ezz"),
         "all_expenses": MessageLookupByLibrary.simpleMessage("All Expenses"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "augest_2024": MessageLookupByLibrary.simpleMessage("Augest 2024"),
         "balance": MessageLookupByLibrary.simpleMessage("Balance"),
         "cash_deposit": MessageLookupByLibrary.simpleMessage("Cash Deposit"),
@@ -35,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Customer Email"),
         "customer_name": MessageLookupByLibrary.simpleMessage("Customer Name"),
         "daily": MessageLookupByLibrary.simpleMessage("Daily"),
+        "dark_mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "dashboard": MessageLookupByLibrary.simpleMessage("Dashboard"),
         "design_product":
             MessageLookupByLibrary.simpleMessage("Design Product"),
@@ -42,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "design_service":
             MessageLookupByLibrary.simpleMessage("Design Service"),
         "dollar_20_129": MessageLookupByLibrary.simpleMessage("\$20.129"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "expenses": MessageLookupByLibrary.simpleMessage("Expenses"),
         "income": MessageLookupByLibrary.simpleMessage("Income"),
         "item_amount": MessageLookupByLibrary.simpleMessage("Item Amount"),
@@ -52,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "landing_page": MessageLookupByLibrary.simpleMessage("Landing Page"),
         "latest_transactions":
             MessageLookupByLibrary.simpleMessage("Latest Transactions"),
+        "light_mode": MessageLookupByLibrary.simpleMessage("Light Mode"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
         "my_card": MessageLookupByLibrary.simpleMessage("My Card"),

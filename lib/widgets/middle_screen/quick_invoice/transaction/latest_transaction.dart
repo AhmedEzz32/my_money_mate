@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import '../forms/quick_invoice_forms.dart';
 import 'latest_transaction_list_view.dart';
@@ -14,12 +14,12 @@ class LatestTransaction extends StatelessWidget {
       children: [
         Text(
           S.current.latest_transactions,
-          style: AppStyles.styleMedium16(context),
+          style: Themes(context).theme.info4.h4Meduim,
         ),
         const LatestTransactionListView(),
-        const Divider(
+        Divider(
           height: 48,
-          color: Color(0xffF1F1F1),
+          color: Themes(context).theme.colors.body2,
         ),
         const QuickInvoiceForms(),
       ],

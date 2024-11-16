@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 
 class QuickInvoiceHeader extends StatelessWidget {
@@ -11,19 +11,19 @@ class QuickInvoiceHeader extends StatelessWidget {
       children: [
         Text(
           S.current.quick_invoice,
-          style: AppStyles.styleSemiBold20(context),
+          style: Themes(context).theme.info4.h2Bold,
         ),
         const Spacer(),
         Container(
           height: 48,
           width: 48,
-          decoration: const ShapeDecoration(
-            color: Color(0xfffafafa),
-            shape: OvalBorder(),
+          decoration: ShapeDecoration(
+            color: Themes(context).theme.colors.background,
+            shape: const OvalBorder(),
           ),
-          child: const Icon(
+          child: Icon(
             Icons.add,
-            color:Color(0xff4EB7F2),
+            color: Themes(context).theme.colors.primary,
           ),
         ),
       ],

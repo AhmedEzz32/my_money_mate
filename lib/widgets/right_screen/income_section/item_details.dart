@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/widgets/right_screen/income_section/item_details_model.dart';
 
 class ItemDetails extends StatelessWidget {
@@ -22,11 +22,11 @@ class ItemDetails extends StatelessWidget {
       ),
       title: Text(
         itemDetailsModel.title,
-        style: AppStyles.styleRegular14(context),
+        style: Themes(context).theme.natural3.body4,
       ),
       trailing: Text(
         itemDetailsModel.value,
-        style: AppStyles.styleRegular14(context),
+        style: Themes(context).theme.natural3.body4,
       ),
       dense: true,
       contentPadding: EdgeInsets.zero,

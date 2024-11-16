@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'package:responsive_adaptive_app/widgets/right_screen/income_section/item_details_model.dart';
 import 'item_details.dart';
@@ -6,32 +7,32 @@ import 'item_details.dart';
 class IncomeDetails extends StatelessWidget {
   const IncomeDetails({super.key});
 
-  static List<ItemDetailsModel> itemDetails = [
+  
+
+  @override
+  Widget build(BuildContext context) {
+  List<ItemDetailsModel> itemDetails = [
     ItemDetailsModel(
-      color: const Color(0xff208bc7),
+      color: Themes(context).theme.colors.info1, 
       title: S.current.design_serice,
       value: '40%',
     ),
     ItemDetailsModel(
-      color: const Color(0xff4db7f2),
+      color: Themes(context).theme.colors.body5,
       title: S.current.design_product,
       value: '25%',
     ),
     ItemDetailsModel(
-      color: const Color(0xff064060),
+      color: Themes(context).theme.colors.info4,
       title: S.current.product_royalty,
       value: '20%',
     ),    
     ItemDetailsModel(
-      color: const Color(0xffe2decd),
+      color: Themes(context).theme.colors.body6,
       title: S.current.other,
       value: '22%',
     ),
   ];
-
-  @override
-  Widget build(BuildContext context) {
-
     return Column(
       children: List.generate(
         itemDetails.length, 

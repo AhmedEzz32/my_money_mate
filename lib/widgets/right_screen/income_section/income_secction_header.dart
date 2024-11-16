@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import '../../drawer/range_options.dart';
 
@@ -16,7 +16,7 @@ class IncomeSectionHeader extends StatelessWidget {
         children: [
           Text(
             S.current.income,
-            style: AppStyles.styleSemiBold18(context),
+            style: Themes(context).theme.info4.h3Bold,
           ),
           RangeOptions(
             text: S.current.monthly,

@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 
 class IncomeChart extends StatefulWidget {
   const IncomeChart({super.key});
@@ -37,22 +38,22 @@ class _IncomeChartState extends State<IncomeChart> {
   List<PieChartSectionData> get getGenerateSection {
     return [
       _createSectionData(
-        const Color(0xff208bc7), 
+        Themes(context).theme.colors.info1, 
         40,
         activeIndex == 0 ? 60 : 50,
       ),
       _createSectionData(
-        const Color(0xff4db7f2), 
+        Themes(context).theme.colors.body5, 
         25,
         activeIndex == 1 ? 60 : 50,
       ),
       _createSectionData(
-        const Color(0xff064060), 
+        Themes(context).theme.colors.info4, 
         20,
         activeIndex == 2 ? 60 : 50,
       ),
       _createSectionData(
-        const Color(0xffe2decd), 
+        Themes(context).theme.colors.body6,
         22,
         activeIndex == 3 ? 60 : 50,
       ),

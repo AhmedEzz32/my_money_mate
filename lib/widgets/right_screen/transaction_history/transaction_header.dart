@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/custom_gesture_detector_widget.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 
 class MyTransactionHeader extends StatelessWidget {
@@ -18,18 +19,13 @@ class MyTransactionHeader extends StatelessWidget {
       children: [
         Text(
           S.current.translation_history,
-          style: AppStyles.styleSemiBold18(context),
+          style: Themes(context).theme.info4.h3Bold,
         ),
-        GestureDetector(
+        CustomGestureDetectorWidget(
           onTap: onToggle,
-          child: MouseRegion(
-            cursor: SystemMouseCursors.click,
-            child: Text(
-              showAll ? S.current.see_less : S.current.see_all,
-              style: AppStyles.styleMedium14(context).copyWith(
-                color: const Color(0xff4eb7f2),
-              ),
-            ),
+          child: Text(
+            showAll ? S.current.see_less : S.current.see_all,
+            style: Themes(context).theme.primary.labelMedium,
           ),
         ),
       ],

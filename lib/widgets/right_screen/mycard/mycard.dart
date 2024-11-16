@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 
 class MyCard extends StatelessWidget {
@@ -20,7 +20,7 @@ class MyCard extends StatelessWidget {
               Assets.imagesCardBackground,
             ),
           ),
-          color: const Color(0xFF4EB7F2),
+          color: Themes(context).theme.colors.primary,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
@@ -33,12 +33,11 @@ class MyCard extends StatelessWidget {
                   const EdgeInsetsDirectional.only(start: 21, end: 32, top: 6),
               title: Text(
                   S.current.name_card,
-                  style: AppStyles.styleRegular14(context).copyWith(
-                    color: Colors.white,
-                  )),
+                  style: Themes(context).theme.background.body2Bold,
+                  ),
               subtitle: Text(
                 S.current.ahmed_ezz,
-                style: AppStyles.styleMedium18(context),
+                style: Themes(context).theme.background.h3Meduim,
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
@@ -50,14 +49,13 @@ class MyCard extends StatelessWidget {
                 children: [
                   Text(
                     '0918 8124 0042 8129',
-                    style: AppStyles.styleSemiBold16(context).copyWith(
-                      color: Colors.white,
+                    style: Themes(context).theme.info4.h4Bold.copyWith(
+                      color: Themes(context).theme.colors.background,
                     ),
                   ),
                   Text(
                     '12/20 - 124',
-                    style: AppStyles.styleRegular14(context)
-                        .copyWith(color: Colors.white),
+                    style: Themes(context).theme.background.body4,
                   ),
                 ],
               ),

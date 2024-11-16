@@ -32,6 +32,9 @@ abstract class ColorInterface {
   Color get error1;
   Color get error2;
   Color get error3;
+  Color get body2;
+  Color get body5;
+  Color get body6;
   Color get error4;
   Color get info1;
   Color get info2;

@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:responsive_adaptive_app/models/user_info_model.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
+import 'package:responsive_adaptive_app/utils/custom_gesture_detector_widget.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'package:responsive_adaptive_app/widgets/drawer/user_info_list_tile.dart';
 
@@ -45,7 +46,7 @@ class LatestTransactionListView extends StatelessWidget {
   Widget build(BuildContext context) {
     final ScrollController scrollController = ScrollController();
 
-    return GestureDetector(
+    return CustomGestureDetectorWidget(
       onHorizontalDragUpdate: (details){
         scrollController.jumpTo(
           scrollController.offset - details.delta.dx, 

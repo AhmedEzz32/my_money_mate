@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 
 class CustomButton extends StatelessWidget { 
   final Color? backgroundColor;
@@ -24,12 +24,12 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           elevation: 0,
-          backgroundColor: backgroundColor ?? const Color(0xff4db7f2),
+          backgroundColor: backgroundColor ?? Themes(context).theme.colors.body5,
         ),
         onPressed: (){},
         child: Text(
           text,
-          style: AppStyles.styleSemiBold18(context).copyWith(color: textColor),
+          style: Themes(context).theme.background.h3Bold.copyWith(color: textColor),
         ),
       ),
     );

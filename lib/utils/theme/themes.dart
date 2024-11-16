@@ -6,10 +6,14 @@ import 'package:responsive_adaptive_app/utils/theme/default_theme/default_theme.
 import 'package:responsive_adaptive_app/utils/theme/interface/theme_interface.dart';
 
 class Themes extends ChangeNotifier {
-
   late ThemeInterface _theme;
   late ThemeMode _mode;
   static const String kThemeColorPrefKey = 'theme_color';
+  final BuildContext context;
+
+  Themes(this.context) {
+    initialize();
+  }
 
   ThemeInterface get theme => _theme;
 
@@ -17,8 +21,7 @@ class Themes extends ChangeNotifier {
 
   void initialize() {
     _setMode();
-    _theme = DefaultTheme(isDark);
-    
+    _theme = DefaultTheme(isDark, context);
     setSystemSatusDefaultColor();
   }
 
@@ -31,9 +34,10 @@ class Themes extends ChangeNotifier {
   set mode(ThemeMode mode) {
     _mode = mode;
     StorageService().saveInt(kThemeColorPrefKey, mode.index);
-    _theme = DefaultTheme(isDark);
+    _theme = DefaultTheme(isDark, context);
     notifyListeners();
   }
+
   void setNextMode() {
     mode = ThemeMode.values[(mode.index + 1) % ThemeMode.values.length];
   }
@@ -45,7 +49,6 @@ class Themes extends ChangeNotifier {
       statusBarBrightness: isDark ? Brightness.dark : Brightness.light,
       statusBarIconBrightness: isDark ? Brightness.light : Brightness.dark,
       systemStatusBarContrastEnforced: true,
-
       systemNavigationBarColor: _theme.colors.background,
       systemNavigationBarDividerColor: isDark ? _theme.colors.background : _theme.colors.secondary,
       systemNavigationBarIconBrightness: isDark ? Brightness.light : Brightness.dark,
@@ -54,45 +57,33 @@ class Themes extends ChangeNotifier {
   }
 
   ThemeData get appTheme {
-    // final textTheme = appTextTheme;
     return ThemeData(
-      // main colors
       primaryColor: _theme.colors.primary,
       primaryColorLight: _theme.colors.primary,
       primaryColorDark: _theme.colors.primaryDark,
       disabledColor: _theme.colors.natural5,
       splashColor: _theme.colors.natural1,
-
-      // use flutter new material design
       useMaterial3: true,
-
-      // ripple effect color
-      // cardview theme
       cardTheme: CardTheme(
         color: _theme.colors.background,
         shadowColor: _theme.colors.natural3,
         elevation: 4,
       ),
-      // app bar theme
       appBarTheme: AppBarTheme(
         centerTitle: true,
         color: _theme.colors.primary,
         elevation: 4,
         shadowColor: _theme.colors.primary,
-        // titleTextStyle: _theme.background.titleMedium,
       ),
-      // button theme
       buttonTheme: ButtonThemeData(
         shape: const StadiumBorder(),
         disabledColor: _theme.colors.natural5,
         buttonColor: _theme.colors.primary,
         splashColor: _theme.colors.primary,
       ),
-
-      // elevated button them
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          textStyle: _theme.background.body2Meduim,
+          textStyle: _theme.background.labelMedium,
           elevation: 4.0,
           shadowColor: _theme.colors.primary,
           backgroundColor: _theme.colors.primary,
@@ -100,11 +91,6 @@ class Themes extends ChangeNotifier {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
         ),
       ),
-
-      // text styles
-      // textTheme: textTheme,
-
-      // date time picker theme
       datePickerTheme: DatePickerThemeData(
         backgroundColor: _theme.colors.background,
         todayBackgroundColor: _datePickerBackgroundColor,
@@ -117,11 +103,10 @@ class Themes extends ChangeNotifier {
         confirmButtonStyle: ButtonStyle(
           foregroundColor: WidgetStateProperty.all(_theme.colors.primary),
         ),
-        dayStyle: Themes().theme.background.body3,
-        yearStyle: Themes().theme.background.body3,
-        weekdayStyle: Themes().theme.background.body3,
+        dayStyle: _theme.background.body3,
+        yearStyle: _theme.background.body3,
+        weekdayStyle: _theme.background.body3,
       ),
-
       timePickerTheme: TimePickerThemeData(
         backgroundColor: _theme.colors.background,
         cancelButtonStyle: ButtonStyle(
@@ -131,31 +116,16 @@ class Themes extends ChangeNotifier {
           foregroundColor: WidgetStateProperty.all(_theme.colors.primary),
         ),
         dialHandColor: _theme.colors.primary,
-        // hourMinuteColor: color.color13,
-        // dialBackgroundColor: color.color13,
         hourMinuteColor: WidgetStateColor.resolveWith((states) => states.contains(WidgetState.selected) ? _theme.colors.primary.withAlpha(50) : Colors.transparent),
         hourMinuteTextColor: _theme.colors.secondary,
         dayPeriodColor: WidgetStateColor.resolveWith((states) => states.contains(WidgetState.selected) ? _theme.colors.primary.withAlpha(50) : Colors.transparent),
       ),
-
-      // input decoration theme (text form field)
       inputDecorationTheme: InputDecorationTheme(
-        // filled color
-        // fillColor: _theme.colors.background,
-        // suffixIconColor: _theme.colors.background,
-        // filled: true,
-
-        // focusColor: _theme.colors.natural1,
-        // content padding
         contentPadding: const EdgeInsets.all(16.0),
-
-        // hint style
         labelStyle: _theme.background.labelMedium,
         hintStyle: _theme.natural2.body3,
-        errorStyle: _theme.error3.label,
+        errorStyle: _theme.error3.body3,
         errorMaxLines: 1,
-
-        // form fileds style
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(color: _theme.colors.natural3, width: 1.0),
           borderRadius: const BorderRadius.all(Radius.circular(18.0)),
@@ -177,8 +147,6 @@ class Themes extends ChangeNotifier {
           borderRadius: const BorderRadius.all(Radius.circular(18.0)),
         ),
       ),
-
-      // bottom navigation bar theme
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: _theme.colors.background,
         selectedItemColor: _theme.colors.primary,
@@ -189,7 +157,6 @@ class Themes extends ChangeNotifier {
         type: BottomNavigationBarType.fixed,
         elevation: 0,
       ),
-
       cupertinoOverrideTheme: CupertinoThemeData(
         primaryColor: _theme.colors.primary,
         primaryContrastingColor: _theme.colors.primaryDark,
@@ -197,31 +164,11 @@ class Themes extends ChangeNotifier {
         scaffoldBackgroundColor: _theme.colors.background,
         textTheme: CupertinoTextThemeData(
           primaryColor: _theme.colors.primary,
-          dateTimePickerTextStyle: Themes().theme.secondry.body3,
+          dateTimePickerTextStyle: Themes(context).theme.secondry.body3,
         ),
       )
     );
   }
-
-  // TextTheme get appTextTheme {
-  //   return TextTheme(
-  //     displayLarge:   _theme.background.displayLarge,
-  //     displayMedium:  _theme.background.displayMedium,
-  //     displaySmall:   _theme.background.displaySmall,
-  //     headlineLarge:  _theme.background.headlineLarge,
-  //     headlineMedium: _theme.background.headlineMedium,
-  //     headlineSmall:  _theme.background.headlineSmall,
-  //     titleLarge:     _theme.background.titleLarge,
-  //     titleMedium:    _theme.background.titleMedium,
-  //     titleSmall:     _theme.background.titleSmall,
-  //     bodyLarge:      _theme.background.bodyLarge,
-  //     bodyMedium:     _theme.background.bodyMedium,
-  //     bodySmall:      _theme.background.bodySmall,
-  //     labelLarge:     _theme.background.labelLarge,
-  //     labelMedium:    _theme.background.labelMedium,
-  //     labelSmall:     _theme.background.labelSmall,
-  //   );
-  // }
 
   void setSystemSatusDefaultColor() {
     SystemChrome.setSystemUIOverlayStyle(systemSatusDefaultColor);
@@ -233,7 +180,7 @@ class Themes extends ChangeNotifier {
     }
     return Colors.transparent;
   });
-    
+
   WidgetStateProperty<Color?>? get _datePickerForegroundColor => WidgetStateProperty.resolveWith<Color?>((states) {
     if (states.contains(WidgetState.selected)) {
       return Colors.black;
@@ -244,7 +191,6 @@ class Themes extends ChangeNotifier {
     return _theme.colors.secondary;
   });
 
-  Themes.init();
   static Themes? _instance;
-  factory Themes() => _instance ??= Themes.init();
+  factory Themes.instance(BuildContext context) => _instance ??= Themes(context);
 }

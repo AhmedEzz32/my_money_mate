@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'package:responsive_adaptive_app/widgets/right_screen/mycard/dot_indicator.dart';
 import 'package:responsive_adaptive_app/widgets/right_screen/mycard/my_card_page_view.dart';
@@ -35,7 +35,7 @@ class _CardViewSectionState extends State<CardViewSection> {
           width: 320,
           child: Text(
             S.current.my_card,
-            style: AppStyles.styleSemiBold16(context)
+            style: Themes(context).theme.info4.h4Bold,
           ),
         ),
         const SizedBox(

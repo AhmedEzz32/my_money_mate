@@ -1,4 +1,5 @@
 {
+    "@@locale": "ar_EG",
     "translation_history": "تاريخ الترجمة",
     "translation_history_description": "عرض تاريخ جميع الترجمات",
     "search": "بحث",
@@ -49,5 +50,9 @@
     "transfer" : "نقل",
     "payment" : "دفع",
     "landing_page" : "صفحة الهبوط",
-    "juni_mobile_app" : "تطبيق جوني المحمول"
+    "juni_mobile_app" : "تطبيق جوني المحمول",
+    "dark_mode" : "الوضع الداكن",
+    "light_mode" : "الوضع الفاتح",
+    "arabic" : "العربية",
+    "english" : "الإنجليزية"
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/models/all_expenses_item_model.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
+import 'package:responsive_adaptive_app/utils/custom_gesture_detector_widget.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'package:responsive_adaptive_app/widgets/middle_screen/all_expenses/all_expenses_item.dart';
 
@@ -47,7 +48,7 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
         return Flexible(
           child: Padding(
             padding: EdgeInsetsDirectional.symmetric(horizontal: MediaQuery.sizeOf(context).width * 0.01),
-            child: GestureDetector(
+            child: CustomGestureDetectorWidget(
               onTap: (){
                 if(selectedIndex != index) {
                   setState(() {
@@ -56,7 +57,7 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
                 }
               },
               child: AllExpensesItem(
-                itemModel: item, 
+                itemModel: item,
                 isSelected: selectedIndex == index,
               )
             ),

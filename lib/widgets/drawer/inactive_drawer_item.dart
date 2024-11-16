@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_adaptive_app/models/drawer_item_model.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 
 class InActiveDrawerItem extends StatelessWidget {
 
@@ -21,13 +21,13 @@ class InActiveDrawerItem extends StatelessWidget {
         fit: BoxFit.scaleDown,
         child: Text(
           drawerItemModel.title,
-          style: AppStyles.styleMedium16(context),
+          style: Themes(context).theme.info4.h4Meduim,
         ),
       ),
       trailing: Container(
         width: 3.27,
-        decoration: const BoxDecoration(
-          color: Colors.white,
+        decoration: BoxDecoration(
+          color: Themes(context).theme.colors.background,
         ),
       ),
     );

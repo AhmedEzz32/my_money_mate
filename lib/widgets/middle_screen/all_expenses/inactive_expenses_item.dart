@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/models/all_expenses_item_model.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'all_expenses_item_header.dart';
 
 class InActiveExpensesItem extends StatefulWidget {
@@ -20,11 +20,11 @@ class _InActiveExpensesItemState extends State<InActiveExpensesItem> {
   Widget build(BuildContext context) {
     return Container(
       padding:  EdgeInsetsDirectional.symmetric(horizontal: MediaQuery.sizeOf(context).width * 0.020 , vertical: MediaQuery.sizeOf(context).height * 0.016),
-      decoration: const ShapeDecoration(
-        color: Colors.white,
+      decoration: ShapeDecoration(
+        color: Themes(context).theme.colors.background,
         shape: RoundedRectangleBorder(
-          side: BorderSide(width: 1 , color: Color(0xfff1f1f1)),
-          borderRadius: BorderRadius.all(Radius.circular(12)),
+          side: BorderSide(width: 1 , color: Themes(context).theme.colors.body2),
+          borderRadius: const BorderRadius.all(Radius.circular(12)),
         ),
       ),
       child: Column(
@@ -37,16 +37,16 @@ class _InActiveExpensesItemState extends State<InActiveExpensesItem> {
             fit: BoxFit.scaleDown,
             child: Text(
               widget.itemModel.title,
-              style: AppStyles.styleSemiBold16(context),
+              style: Themes(context).theme.info4.h4Bold,
             ),
-          ),    
-          const SizedBox(height: 8,),      
+          ),
+          const SizedBox(height: 8,),
           FittedBox(
             alignment: AlignmentDirectional.centerStart,
             fit: BoxFit.scaleDown,
             child: Text(
               widget.itemModel.date,
-              style: AppStyles.styleRegular14(context),
+              style: Themes(context).theme.natural3.body4,
             ),
           ),   
           const SizedBox(height: 16,),        
@@ -55,7 +55,7 @@ class _InActiveExpensesItemState extends State<InActiveExpensesItem> {
             fit: BoxFit.scaleDown,
             child: Text(
               widget.itemModel.price,
-              style: AppStyles.styleSemiBold24(context),
+              style: Themes(context).theme.primary.h3large,
             ),
           ),
         ],

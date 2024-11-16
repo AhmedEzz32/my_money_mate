@@ -15,6 +15,7 @@ abstract class ThemeInterface {
   TextStyleInterface get primary;
   TextStyleInterface get black2;
   TextStyleInterface get darkModeP;
+  TextStyleInterface get info4;
   TextStyleInterface get natural1;
   TextStyleInterface get natural2;
   TextStyleInterface get natural3;

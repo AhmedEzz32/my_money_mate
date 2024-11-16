@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/utils/services/settings_service.dart';
 import 'package:responsive_adaptive_app/utils/services/storage_service.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
+import 'utils/theme/themes.dart';
 import 'views/dashboard_view.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -9,7 +10,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await StorageService().initialize();
   await SettingService().initialize();
-  runApp(const ResponsiveDashBoard());
+  runApp(ResponsiveDashBoard());
 }
 
 class ResponsiveDashBoard extends StatelessWidget {
@@ -17,17 +18,24 @@ class ResponsiveDashBoard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      locale: SettingService().language.locale,
-      localizationsDelegates: const [
-        S.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
-      debugShowCheckedModeBanner: false,
-      home: DashBoardView(),
+    Themes(context).initialize();
+    return AnimatedBuilder(
+      animation: SettingService(),
+      builder: (context, _) {
+        return MaterialApp(
+          theme: Themes(context).appTheme,
+          locale: SettingService().language.locale,
+          localizationsDelegates: const [
+            S.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
+          debugShowCheckedModeBanner: false,
+          home: DashBoardView(),
+        );
+      }
     );
   }
 }

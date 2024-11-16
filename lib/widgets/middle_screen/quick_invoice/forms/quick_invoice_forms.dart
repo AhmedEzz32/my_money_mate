@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import '../transaction/title_text_field.dart';
 import 'custom_button.dart';
@@ -50,7 +51,7 @@ class QuickInvoiceForms extends StatelessWidget {
               child: CustomButton(
                 text: S.current.add_more_details,
                 backgroundColor: Colors.transparent,
-                textColor: const Color(0xff4db7f2),
+                textColor: Themes(context).theme.colors.body5,
               ),
             ),
             const SizedBox(width: 12,),

@@ -16,14 +16,23 @@ class DrawerItemListView extends StatefulWidget {
 class _DrawerItemListViewState extends State<DrawerItemListView> {
   
   int selectedIndex = 0;
+  late List<DrawerItemModel> items;
 
-  final List<DrawerItemModel> items = [
-    DrawerItemModel(title: S.current.dashboard, image: Assets.imagesDashboard),
-    DrawerItemModel(title: S.current.my_transactions, image: Assets.imagesMyTransaction),
-    DrawerItemModel(title: S.current.statistics, image: Assets.imagesStatistics),
-    DrawerItemModel(title: S.current.wallet_account, image: Assets.imagesWalletAccount),
-    DrawerItemModel(title: S.current.my_investment, image: Assets.imagesMyInvestment),
-  ];
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _updateItems();
+  }
+
+  void _updateItems() {
+    items = [
+      DrawerItemModel(title: S.current.dashboard, image: Assets.imagesDashboard),
+      DrawerItemModel(title: S.current.my_transactions, image: Assets.imagesMyTransaction),
+      DrawerItemModel(title: S.current.statistics, image: Assets.imagesStatistics),
+      DrawerItemModel(title: S.current.wallet_account, image: Assets.imagesWalletAccount),
+      DrawerItemModel(title: S.current.my_investment, image: Assets.imagesMyInvestment),
+    ];
+  }
   
   @override
   Widget build(BuildContext context) {

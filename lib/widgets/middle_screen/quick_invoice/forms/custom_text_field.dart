@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hint;
@@ -11,21 +11,21 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: AppStyles.styleRegular16(context).copyWith(color: const Color(0xffaaaaaa)),
-        fillColor:const Color(0xfffafafa),
+        hintStyle: Themes(context).theme.natural3.body1,
+        fillColor: Themes(context).theme.colors.background,
         filled: true,
-        border: _buildBorder(),
-        enabledBorder: _buildBorder(),
-        focusedBorder: _buildBorder(),
+        border: _buildBorder(context),
+        enabledBorder: _buildBorder(context),
+        focusedBorder: _buildBorder(context),
       ),
     );
   }
 
-  OutlineInputBorder _buildBorder() {
+  OutlineInputBorder _buildBorder(BuildContext context) {
     return OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide: const BorderSide(
-          color: Color(0xfffafafa),
+        borderSide: BorderSide(
+          color: Themes(context).theme.colors.background,
         )
       );
   }

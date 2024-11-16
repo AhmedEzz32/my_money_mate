@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import '../../drawer/range_options.dart';
 
@@ -13,7 +13,7 @@ class AllExpensesHeader extends StatelessWidget {
       children: [
         Text(
           S.current.all_expenses,
-          style: AppStyles.styleSemiBold20(context),
+          style: Themes(context).theme.secondry.h2Meduim,
         ),
         RangeOptions(
           text: S.current.monthly,

@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:responsive_adaptive_app/utils/styles.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import '../forms/custom_text_field.dart';
 
 class TitleTextField extends StatelessWidget {
@@ -14,7 +14,7 @@ class TitleTextField extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppStyles.styleMedium16(context),
+          style: Themes(context).theme.info4.h4Meduim,
         ),
         const SizedBox(height: 12),
         CustomTextField(hint: hint),

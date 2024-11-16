@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
   final String image;
@@ -25,12 +26,12 @@ class AllExpensesItemHeader extends StatelessWidget {
               child: Container(
                 decoration: ShapeDecoration(
                   shape: const OvalBorder(),
-                  color: imageBackground ?? const Color(0xfffAfAFa)
+                  color: imageBackground ?? Themes(context).theme.colors.body2
                 ),
                 child: Center(
                   child: SvgPicture.asset(
                     image, 
-                    colorFilter: ColorFilter.mode(imageColor ?? const Color(0xff4EB7F2), BlendMode.srcIn),
+                    colorFilter: ColorFilter.mode(imageColor ?? Themes(context).theme.colors.primary, BlendMode.srcIn),
                   ),
                 ),
               ),
@@ -42,7 +43,7 @@ class AllExpensesItemHeader extends StatelessWidget {
             angle: -1.5707963267949 * 2,
             child: Icon(
               Icons.arrow_back_ios_rounded,
-              color: imageColor?? const Color(0xff064061),
+              color: imageColor?? Themes(context).theme.colors.info4,
             ),
           ),
         ),

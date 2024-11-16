@@ -7,7 +7,11 @@ class TransactionHistoryListView extends StatelessWidget {
   final bool showAll;
   const TransactionHistoryListView({super.key, required this.showAll});
 
-  static List<TransactionModel> items = [
+  
+
+  @override
+  Widget build(BuildContext context) {
+  List<TransactionModel> items = [
     TransactionModel(
       title: S.current.cash_withdrawal,
       date: '22th oct 2024\nat 12:00 AM',
@@ -27,9 +31,6 @@ class TransactionHistoryListView extends StatelessWidget {
       isWithDrawal: false,
     ),
   ];
-
-  @override
-  Widget build(BuildContext context) {
     return Column(
       children: (showAll ? items : items.take(1)).map((e) => TransactionItem(transactionModel: e)).toList(),
     );
