@@ -4,115 +4,129 @@ import 'package:responsive_adaptive_app/utils/size_config.dart';
 abstract class AppStyles {
   static const String fontFamily = "Montserrat";
 
-  static TextStyle styleRegular12(BuildContext context) {
+  static TextStyle styleRegular12(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 12),
       fontWeight: FontWeight.w400,
+      color: color,
     );
   }
 
-  static TextStyle styleSemiBold12(BuildContext context) {
+  static TextStyle styleSemiBold12(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 12),
       fontWeight: FontWeight.w600,
+      color: color,
     );
   }
 
-  static TextStyle styleRegular14(BuildContext context) {
+  static TextStyle styleRegular14(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 14),
       fontWeight: FontWeight.w400,
+      color: color,
     );
   }
 
-  static TextStyle styleMedium14(BuildContext context) {
+  static TextStyle styleMedium14(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 14),
       fontWeight: FontWeight.w500,
+      color: color,
     );
   }
 
-  static TextStyle styleSemiBold14(BuildContext context) {
+  static TextStyle styleSemiBold14(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 14),
       fontWeight: FontWeight.w600,
+      color: color,
     );
   }
 
-  static TextStyle styleRegular16(BuildContext context) {
+  static TextStyle styleRegular16(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w400,
+      color: color,
     );
   }
 
-  static TextStyle styleMedium16(BuildContext context) {
+  static TextStyle styleMedium16(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w500,
+      color: color,
     );
   }
 
-  static TextStyle styleSemiBold16(BuildContext context) {
+  static TextStyle styleSemiBold16(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w600,
+      color: color,
     );
   }
 
-  static TextStyle styleBold16(BuildContext context) {
+  static TextStyle styleBold16(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w700,
+      color: color,
     );
   }
 
-  static TextStyle styleMedium18(BuildContext context) {
+  static TextStyle styleMedium18(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 18),
       fontWeight: FontWeight.w500,
+      color: color,
     );
   }
 
-  static TextStyle styleSemiBold18(BuildContext context) {
+  static TextStyle styleSemiBold18(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 18),
       fontWeight: FontWeight.w600,
+      color: color,
     );
   }
 
-  static TextStyle styleSemiBold20(BuildContext context) {
+  static TextStyle styleSemiBold20(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 20),
       fontWeight: FontWeight.w600,
+      color: color,
     );
   }
 
-  static TextStyle styleMedium20(BuildContext context) {
+  static TextStyle styleMedium20(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 20),
       fontWeight: FontWeight.w500,
+      color: color,
     );
   }
 
-  static TextStyle styleSemiBold24(BuildContext context) {
+  static TextStyle styleSemiBold24(BuildContext context, Color color) {
     return TextStyle(
       fontFamily: fontFamily,
       fontSize: getResposiveFontSize(context, fontSize: 24),
       fontWeight: FontWeight.w600,
+      color: color,
     );
   }
 }

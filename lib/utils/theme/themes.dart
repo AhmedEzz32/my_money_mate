@@ -20,9 +20,11 @@ class Themes extends ChangeNotifier {
   bool get isDark => _mode == ThemeMode.dark;
 
   void initialize() {
-    _setMode();
-    _theme = DefaultTheme(isDark, context);
-    setSystemSatusDefaultColor();
+    if (_instance == null) {
+      _setMode();
+      _theme = DefaultTheme(isDark, context);
+      setSystemSatusDefaultColor();
+    }
   }
 
   void _setMode() {

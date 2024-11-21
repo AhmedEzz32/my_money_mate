@@ -49,9 +49,7 @@ class MyCard extends StatelessWidget {
                 children: [
                   Text(
                     '0918 8124 0042 8129',
-                    style: Themes(context).theme.info4.h4Bold.copyWith(
-                      color: Themes(context).theme.colors.background,
-                    ),
+                    style: Themes(context).theme.info4.h4Bold,
                   ),
                   Text(
                     '12/20 - 124',

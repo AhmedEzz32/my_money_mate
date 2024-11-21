@@ -9,43 +9,43 @@ abstract class DefaultStyleTheme extends TextStyleInterface {
   DefaultStyleTheme(this.context);
 
   @override
-  TextStyle get h3large => AppStyles.styleSemiBold24(context);
+  TextStyle get h3large => AppStyles.styleSemiBold24(context, color);
   
   @override
-  TextStyle get h2Meduim => AppStyles.styleMedium20(context);
+  TextStyle get h2Meduim => AppStyles.styleMedium20(context, color);
 
   @override
-  TextStyle get h2Bold => AppStyles.styleSemiBold20(context);
+  TextStyle get h2Bold => AppStyles.styleSemiBold20(context, color);
 
   @override
-  TextStyle get h3Meduim => AppStyles.styleMedium18(context);
+  TextStyle get h3Meduim => AppStyles.styleMedium18(context, color);
 
   @override
-  TextStyle get h3Bold => AppStyles.styleSemiBold18(context);
+  TextStyle get h3Bold => AppStyles.styleSemiBold18(context, color);
 
   @override
-  TextStyle get h1 => AppStyles.styleBold16(context);
+  TextStyle get h1 => AppStyles.styleBold16(context, color);
 
   @override
-  TextStyle get h4Meduim => AppStyles.styleMedium16(context);
+  TextStyle get h4Meduim => AppStyles.styleMedium16(context, color);
 
   @override
-  TextStyle get h4Bold => AppStyles.styleSemiBold16(context);
+  TextStyle get h4Bold => AppStyles.styleSemiBold16(context, color);
 
   @override
-  TextStyle get body1 => AppStyles.styleRegular16(context);
+  TextStyle get body1 => AppStyles.styleRegular16(context, color);
 
   @override
-  TextStyle get body2Bold => AppStyles.styleSemiBold14(context);
+  TextStyle get body2Bold => AppStyles.styleSemiBold14(context, color);
 
   @override
-  TextStyle get body4 => AppStyles.styleRegular14(context);
+  TextStyle get body4 => AppStyles.styleRegular14(context, color);
 
   @override
-  TextStyle get body3 => AppStyles.styleRegular12(context);
+  TextStyle get body3 => AppStyles.styleRegular12(context, color);
 
   @override
-  TextStyle get labelMedium => AppStyles.styleMedium14(context);
+  TextStyle get labelMedium => AppStyles.styleMedium14(context, color);
 }
 
 class BackgroundTheme extends DefaultStyleTheme {

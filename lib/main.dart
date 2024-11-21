@@ -18,7 +18,7 @@ class ResponsiveDashBoard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Themes(context).initialize();
+    Themes(context);
     return AnimatedBuilder(
       animation: SettingService(),
       builder: (context, _) {
