@@ -15,7 +15,7 @@ class MyCardPageView extends StatelessWidget {
       allowImplicitScrolling: true,
       pageSnapping: true,
       scrollBehavior: CustomScrollBehavior(),
-      itemBuilder: (context, index) => const MyCard(),
+      itemBuilder: (context, index) => MyCard(),
     );
   }
 }

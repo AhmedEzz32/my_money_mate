@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 
 class CustomTextField extends StatelessWidget {
-  final String hint;
+  final String Function() hint;
   
-  const CustomTextField({super.key,required this.hint});
+  CustomTextField({super.key,required this.hint});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        hintText: hint,
+        hintText: hint.call(),
         hintStyle: Themes(context).theme.natural3.body1,
         fillColor: Themes(context).theme.colors.background,
         filled: true,

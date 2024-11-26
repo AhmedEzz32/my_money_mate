@@ -3,7 +3,7 @@ import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/widgets/middle_screen/all_expenses/all_expenses_item_header.dart';
 import '../../../models/all_expenses_item_model.dart';
 
-class ActiveExpensesItem extends StatefulWidget {
+class ActiveExpensesItem extends StatelessWidget {
   final AllExpensesItemModel itemModel;
 
   const ActiveExpensesItem({
@@ -11,11 +11,6 @@ class ActiveExpensesItem extends StatefulWidget {
     required this.itemModel,
   });
 
-  @override
-  State<ActiveExpensesItem> createState() => _ActiveExpensesItemState();
-}
-
-class _ActiveExpensesItemState extends State<ActiveExpensesItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +25,7 @@ class _ActiveExpensesItemState extends State<ActiveExpensesItem> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           AllExpensesItemHeader(
-            image: widget.itemModel.image,
+            image: itemModel.image,
             imageBackground: Themes(context).theme.colors.background.withOpacity(0.10000000149011612),
             imageColor: Themes(context).theme.colors.background,
           ),
@@ -39,7 +34,7 @@ class _ActiveExpensesItemState extends State<ActiveExpensesItem> {
             alignment: AlignmentDirectional.centerStart,
             fit: BoxFit.scaleDown,
             child: Text(
-              widget.itemModel.title,
+              itemModel.title.call(),
               style: Themes(context).theme.background.h4Bold,
             ),
           ),
@@ -48,7 +43,7 @@ class _ActiveExpensesItemState extends State<ActiveExpensesItem> {
             alignment: AlignmentDirectional.centerStart,
             fit: BoxFit.scaleDown,
             child: Text(
-              widget.itemModel.date,
+              itemModel.date.call(),
               style: Themes(context).theme.background.body4,
             ),
           ),
@@ -57,7 +52,7 @@ class _ActiveExpensesItemState extends State<ActiveExpensesItem> {
             alignment: AlignmentDirectional.centerStart,
             fit: BoxFit.scaleDown,
             child: Text(
-              widget.itemModel.price,
+              itemModel.price.call(),
               style: Themes(context).theme.background.h3large,
             ),
           ),

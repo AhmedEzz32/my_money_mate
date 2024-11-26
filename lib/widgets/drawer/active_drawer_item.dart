@@ -20,7 +20,7 @@ class ActiveDrawerItem extends StatelessWidget {
         alignment: AlignmentDirectional.centerStart,
         fit: BoxFit.scaleDown,
         child: Text(
-          drawerItemModel.title,
+          drawerItemModel.title.call(),
           style: Themes(context).theme.primary.h1.copyWith(
             color: Themes(context).theme.colors.primary,
           ),

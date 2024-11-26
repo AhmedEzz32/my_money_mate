@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_adaptive_app/utils/globals.dart';
 import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import '../transaction/title_text_field.dart';
@@ -17,13 +18,15 @@ class QuickInvoiceForms extends StatelessWidget {
           children: [
             Expanded(
               child: TitleTextField(
-                title: S.current.customer_name, hint: S.current.type_customer_name,
+                title: () => S.of(cxt).customer_name, 
+                hint: () => S.of(cxt).type_customer_name,
               ),
             ),
             sizedBoxWidth,            
             Expanded(
               child: TitleTextField(
-                title: S.current.customer_email, hint: S.current.type_customer_email,
+                title: () => S.of(cxt).customer_email, 
+                hint: () => S.of(cxt).type_customer_email,
               ),
             ),
           ],
@@ -33,13 +36,15 @@ class QuickInvoiceForms extends StatelessWidget {
           children: [
             Expanded(
               child: TitleTextField(
-                title: S.current.item_name, hint: S.current.type_item_name,
+                title: () => S.of(cxt).item_name, 
+                hint: () => S.of(cxt).type_item_name,
               ),
             ),
             sizedBoxWidth,
             Expanded(
               child: TitleTextField(
-                title: S.current.item_amount , hint: S.current.usd,
+                title: () => S.of(cxt).item_amount, 
+                hint: () => S.of(cxt).usd,
               ),
             ),
           ],

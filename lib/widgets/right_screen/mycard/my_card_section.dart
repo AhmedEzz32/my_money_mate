@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:responsive_adaptive_app/utils/globals.dart';
 import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'package:responsive_adaptive_app/widgets/right_screen/mycard/dot_indicator.dart';
@@ -34,7 +35,7 @@ class _CardViewSectionState extends State<CardViewSection> {
         SizedBox(
           width: 320,
           child: Text(
-            S.current.my_card,
+            S.of(cxt).my_card,
             style: Themes(context).theme.info4.h4Bold,
           ),
         ),

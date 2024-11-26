@@ -20,7 +20,7 @@ class InActiveDrawerItem extends StatelessWidget {
         alignment: AlignmentDirectional.centerStart,
         fit: BoxFit.scaleDown,
         child: Text(
-          drawerItemModel.title,
+          drawerItemModel.title.call(),
           style: Themes(context).theme.info4.h4Meduim,
         ),
       ),

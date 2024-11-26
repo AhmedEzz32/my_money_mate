@@ -1,6 +1,6 @@
 class UserInfoModel{
   final String image;
-  final String title;
+  final String Function() title;
   final String subTitle;
 
   UserInfoModel(

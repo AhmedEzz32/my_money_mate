@@ -13,7 +13,7 @@ class MiddleScreenPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Padding(
       padding: EdgeInsets.symmetric(vertical: verticalPadding ?? 24),
-      child: const Column(
+      child: Column(
         children: [
           AllExpenses(),
           SizedBox(height: 24,),

@@ -3,6 +3,7 @@ import 'package:responsive_adaptive_app/models/drawer_item_model.dart';
 import 'package:responsive_adaptive_app/models/user_info_model.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
 import 'package:responsive_adaptive_app/utils/custom_gesture_detector_widget.dart';
+import 'package:responsive_adaptive_app/utils/globals.dart';
 import 'package:responsive_adaptive_app/utils/services/settings_service.dart';
 import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
@@ -30,7 +31,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             child: UserInfoListTile(
               userInfoModel: UserInfoModel(
                 image: Assets.imagesAvatar1,
-                title: S.current.ahmed_ezz,
+                title: () => S.current.ahmed_ezz,
                 subTitle: 'ahmed.mobiledev@gmail.com',
               ),
             ),
@@ -62,7 +63,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   },
                   child: InActiveDrawerItem(
                     drawerItemModel: DrawerItemModel(
-                      title: S.current.settings,
+                      title: () => S.of(cxt).settings,
                       image: Assets.imagesDashboard,
                     ),
                   ),
@@ -102,13 +103,13 @@ class _CustomDrawerState extends State<CustomDrawer> {
                             child: Row(
                               children: [
                                 Icon(
-                                  Icons.language, 
+                                  Icons.language,
                                   color: Themes(context).theme.colors.primary,
                                   size: 22,
                                 ),
                                 const SizedBox(width: 5,),
                                 Text(
-                                  S.current.arabic,
+                                  SettingService().isRTL? S.current.english : S.current.arabic,
                                 ),
                               ],
                             ),
@@ -121,7 +122,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
 
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
-                    title: S.current.logout, 
+                    title: () => S.of(cxt).logout, 
                     image: Assets.imagesLogout,
                   ),
                 ),

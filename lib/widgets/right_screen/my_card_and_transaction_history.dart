@@ -12,12 +12,12 @@ class MyCardAndTransactionHistory extends StatelessWidget {
     return CustomBackgroundContainer(
       child: Column(
         children: [
-          const CardViewSection(),
+          CardViewSection(),
           Divider(
             color: Themes(context).theme.colors.body2,
             height: 20,
           ),
-          const TransactionHistory(),
+          TransactionHistory(),
         ],
       ),
     );

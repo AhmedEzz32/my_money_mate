@@ -1,5 +1,6 @@
 class AllExpensesItemModel{
-  final String image , title , date, price;
+  final String image;
+  final String Function() title, date, price;
 
   AllExpensesItemModel({
     required this.image,

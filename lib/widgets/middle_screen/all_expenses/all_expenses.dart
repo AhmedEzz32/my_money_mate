@@ -8,7 +8,7 @@ class AllExpenses extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomBackgroundContainer(
+    return CustomBackgroundContainer(
       child: Column(
         children: [
           AllExpensesHeader(),

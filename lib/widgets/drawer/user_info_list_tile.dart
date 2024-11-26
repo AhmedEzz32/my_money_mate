@@ -22,7 +22,7 @@ class UserInfoListTile extends StatelessWidget {
           alignment: AlignmentDirectional.centerStart,
           fit: BoxFit.scaleDown,
           child: Text(
-            userInfoModel.title,
+            userInfoModel.title.call(),
             style: Themes(context).theme.primary.h4Bold,
           ),
         ),

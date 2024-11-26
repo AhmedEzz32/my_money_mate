@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
+import 'package:responsive_adaptive_app/utils/globals.dart';
 import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 
@@ -32,11 +33,11 @@ class MyCard extends StatelessWidget {
               contentPadding:
                   const EdgeInsetsDirectional.only(start: 21, end: 32, top: 6),
               title: Text(
-                  S.current.name_card,
+                  S.of(cxt).name_card,
                   style: Themes(context).theme.background.body2Bold,
                   ),
               subtitle: Text(
-                S.current.ahmed_ezz,
+                S.of(cxt).ahmed_ezz,
                 style: Themes(context).theme.background.h3Meduim,
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),

@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:responsive_adaptive_app/models/drawer_item_model.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
+import 'package:responsive_adaptive_app/utils/globals.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import 'drawer_item.dart';
 
@@ -26,11 +27,11 @@ class _DrawerItemListViewState extends State<DrawerItemListView> {
 
   void _updateItems() {
     items = [
-      DrawerItemModel(title: S.current.dashboard, image: Assets.imagesDashboard),
-      DrawerItemModel(title: S.current.my_transactions, image: Assets.imagesMyTransaction),
-      DrawerItemModel(title: S.current.statistics, image: Assets.imagesStatistics),
-      DrawerItemModel(title: S.current.wallet_account, image: Assets.imagesWalletAccount),
-      DrawerItemModel(title: S.current.my_investment, image: Assets.imagesMyInvestment),
+      DrawerItemModel(title: () => S.of(cxt).dashboard, image: Assets.imagesDashboard),
+      DrawerItemModel(title: () => S.of(cxt).my_transactions, image: Assets.imagesMyTransaction),
+      DrawerItemModel(title: () => S.of(cxt).statistics, image: Assets.imagesStatistics),
+      DrawerItemModel(title: () => S.of(cxt).wallet_account, image: Assets.imagesWalletAccount),
+      DrawerItemModel(title: () => S.of(cxt).my_investment, image: Assets.imagesMyInvestment),
     ];
   }
   

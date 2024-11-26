@@ -3,7 +3,7 @@ import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
 import '../../utils/theme/themes.dart';
 
 class RangeOptions extends StatefulWidget {
-  final String text;
+  final String Function() text;
   const RangeOptions({
     super.key,
     required this.text,

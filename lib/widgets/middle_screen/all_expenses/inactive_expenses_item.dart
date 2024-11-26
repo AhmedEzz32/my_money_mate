@@ -3,7 +3,7 @@ import 'package:responsive_adaptive_app/models/all_expenses_item_model.dart';
 import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'all_expenses_item_header.dart';
 
-class InActiveExpensesItem extends StatefulWidget {
+class InActiveExpensesItem extends StatelessWidget {
   const InActiveExpensesItem({
     super.key,
     required this.itemModel,
@@ -11,11 +11,6 @@ class InActiveExpensesItem extends StatefulWidget {
 
   final AllExpensesItemModel itemModel;
 
-  @override
-  State<InActiveExpensesItem> createState() => _InActiveExpensesItemState();
-}
-
-class _InActiveExpensesItemState extends State<InActiveExpensesItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,13 +25,13 @@ class _InActiveExpensesItemState extends State<InActiveExpensesItem> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AllExpensesItemHeader(image: widget.itemModel.image),
+          AllExpensesItemHeader(image: itemModel.image),
           const SizedBox(height: 34,),
           FittedBox(
             alignment: AlignmentDirectional.centerStart,
             fit: BoxFit.scaleDown,
             child: Text(
-              widget.itemModel.title,
+              itemModel.title.call(),
               style: Themes(context).theme.info4.h4Bold,
             ),
           ),
@@ -45,7 +40,7 @@ class _InActiveExpensesItemState extends State<InActiveExpensesItem> {
             alignment: AlignmentDirectional.centerStart,
             fit: BoxFit.scaleDown,
             child: Text(
-              widget.itemModel.date,
+              itemModel.date.call(),
               style: Themes(context).theme.natural3.body4,
             ),
           ),   
@@ -54,7 +49,7 @@ class _InActiveExpensesItemState extends State<InActiveExpensesItem> {
             alignment: AlignmentDirectional.centerStart,
             fit: BoxFit.scaleDown,
             child: Text(
-              widget.itemModel.price,
+              itemModel.price.call(),
               style: Themes(context).theme.primary.h3large,
             ),
           ),
