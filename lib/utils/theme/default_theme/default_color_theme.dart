@@ -29,22 +29,22 @@ class DefaultColorTheme extends ColorInterface {
   Color get darkModeP => const Color(0xFF2E96D8);
 
   @override
-  Color get natural1 => isDark ? const Color(0xFF1A1B1C) : const Color(0xFFF7F9FA);
+  Color get natural1 =>  const Color(0xFFF7F9FA);
 
   @override
-  Color get natural2 => isDark ? const Color(0xFF2C2C2C) : const Color(0xFFE8E8E8);
+  Color get natural2 =>  const Color(0xFFE8E8E8);
 
   @override
-  Color get natural3 => isDark ? const Color(0xFF333333) : const Color(0xFFAAAAAA);
+  Color get natural3 =>  const Color(0xFFAAAAAA);
 
   @override
-  Color get natural4 => isDark ? const Color(0xFF444444) : const Color(0xFF909090);
+  Color get natural4 => const Color(0xFF909090);
 
   @override
-  Color get natural5 => isDark ? const Color(0xFF555555) : const Color(0xFF6F6F6F);
+  Color get natural5 => const Color(0xFF6F6F6F);
 
   @override
-  Color get natural6 => isDark ? const Color(0xFF666666) : const Color(0xFF4D4D4D);
+  Color get natural6 => const Color(0xFF4D4D4D);
 
   @override
   Color get success1 => const Color(0xFF4CAF50);
@@ -83,16 +83,16 @@ class DefaultColorTheme extends ColorInterface {
   Color get error4 => const Color(0xFFB91C1C);
 
   @override
-  Color get info1 => const Color(0xFF208CC8);
+  Color get info1 => isDark ? const Color(0xFFD1D5DA) : const Color(0xFF208CC8);
 
   @override
-  Color get info2 => const Color(0xFF45AFEA);
+  Color get info2 => isDark ? const Color(0xFFD1D5DA) : const Color(0xFF45AFEA);
 
   @override
-  Color get info3 => const Color(0xFF2E96D8);
+  Color get info3 => isDark ? const Color(0xFFD1D5DA) : const Color(0xFF2E96D8);
 
   @override
-  Color get info4 => const Color(0xFF064061);
+  Color get info4 => isDark ? const Color(0xFFD1D5DA) : const Color(0xFF064061);
 
   @override
   Color get black1 => const Color(0xFF1A1A1A);

@@ -3,7 +3,6 @@ import 'package:responsive_adaptive_app/models/drawer_item_model.dart';
 import 'package:responsive_adaptive_app/models/user_info_model.dart';
 import 'package:responsive_adaptive_app/utils/app_images.dart';
 import 'package:responsive_adaptive_app/utils/custom_gesture_detector_widget.dart';
-import 'package:responsive_adaptive_app/utils/globals.dart';
 import 'package:responsive_adaptive_app/utils/services/settings_service.dart';
 import 'package:responsive_adaptive_app/utils/theme/themes.dart';
 import 'package:responsive_adaptive_app/utils/translation/generated/l10n.dart';
@@ -20,6 +19,7 @@ class CustomDrawer extends StatefulWidget {
 
 class _CustomDrawerState extends State<CustomDrawer> {
   bool showSettingOption = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,15 +36,13 @@ class _CustomDrawerState extends State<CustomDrawer> {
               ),
             ),
           ),
-
           const SliverToBoxAdapter(
             child: SizedBox(
               height: 8,
             ),
           ),
-
+          // ignore: prefer_const_constructors
           DrawerItemListView(),
-
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
@@ -54,7 +52,6 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     height: 20,
                   ),
                 ),
-
                 CustomGestureDetectorWidget(
                   onTap: () {
                     setState(() {
@@ -63,41 +60,44 @@ class _CustomDrawerState extends State<CustomDrawer> {
                   },
                   child: InActiveDrawerItem(
                     drawerItemModel: DrawerItemModel(
-                      title: () => S.of(cxt).settings,
+                      title: () => S.of(context).settings,
                       image: Assets.imagesDashboard,
                     ),
                   ),
                 ),
-
                 if (showSettingOption)
                   FittedBox(
                     fit: BoxFit.scaleDown,
                     child: Row(
                       children: [
-                        const SizedBox(width: 10,),
-                          FittedBox(
+                        const SizedBox(width: 10),
+                        FittedBox(
                           fit: BoxFit.scaleDown,
                           child: CustomGestureDetectorWidget(
+                            onTap: () {
+                              toggleThemeMode();
+                            },
                             child: Row(
                               children: [
                                 Icon(
-                                  Icons.brightness_3_outlined, 
+                                  Icons.brightness_3_outlined,
                                   color: Themes(context).theme.colors.primary,
                                   size: 22,
                                 ),
-                                const SizedBox(width: 5,),
+                                const SizedBox(width: 5),
                                 Text(
                                   S.current.dark_mode,
+                                  style: Themes(context).theme.secondry.body4,
                                 ),
                               ],
                             ),
                           ),
                         ),
-                        const SizedBox(width: 20,),
+                        const SizedBox(width: 20),
                         FittedBox(
                           fit: BoxFit.scaleDown,
                           child: CustomGestureDetectorWidget(
-                            onTap: (){
+                            onTap: () {
                               SettingService().changeLanguage;
                             },
                             child: Row(
@@ -107,32 +107,45 @@ class _CustomDrawerState extends State<CustomDrawer> {
                                   color: Themes(context).theme.colors.primary,
                                   size: 22,
                                 ),
-                                const SizedBox(width: 5,),
+                                const SizedBox(width: 5),
                                 Text(
-                                  SettingService().isRTL? S.current.english : S.current.arabic,
+                                  SettingService().isRTL ? S.current.english : S.current.arabic,
+                                  style: Themes(context).theme.secondry.body4,
                                 ),
                               ],
                             ),
                           ),
                         ),
-                        const SizedBox(width: 20,),
+                        const SizedBox(width: 20),
                       ],
                     ),
                   ),
-
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(
-                    title: () => S.of(cxt).logout, 
+                    title: () => S.of(context).logout,
                     image: Assets.imagesLogout,
                   ),
                 ),
-
-                const Flexible(child: SizedBox(height: 48,)),
+                const Flexible(child: SizedBox(height: 48)),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
+  }
+
+  void toggleThemeMode() {
+    final currentMode = Themes(context).mode;
+    if (currentMode == ThemeMode.dark) {
+      setState(() {
+        Themes(context).mode = ThemeMode.light;
+      });
+    } else {
+      setState(() {
+        Themes(context).mode = ThemeMode.dark;
+      });
+    }
+    setState(() {});
   }
 }
