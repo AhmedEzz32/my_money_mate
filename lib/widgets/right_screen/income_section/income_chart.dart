@@ -38,12 +38,12 @@ class _IncomeChartState extends State<IncomeChart> {
   List<PieChartSectionData> get getGenerateSection {
     return [
       _createSectionData(
-        Themes(context).theme.colors.info1, 
+        Themes(context).theme.colors.success1, 
         40,
         activeIndex == 0 ? 60 : 50,
       ),
       _createSectionData(
-        Themes(context).theme.colors.body5, 
+        Themes(context).theme.colors.success2, 
         25,
         activeIndex == 1 ? 60 : 50,
       ),
@@ -53,7 +53,7 @@ class _IncomeChartState extends State<IncomeChart> {
         activeIndex == 2 ? 60 : 50,
       ),
       _createSectionData(
-        Themes(context).theme.colors.body6,
+        Themes(context).theme.colors.success4,
         22,
         activeIndex == 3 ? 60 : 50,
       ),
