@@ -138,14 +138,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
   void toggleThemeMode() {
     final currentMode = Themes(context).mode;
     if (currentMode == ThemeMode.dark) {
-      setState(() {
-        Themes(context).mode = ThemeMode.light;
-      });
+      Themes(context).mode = ThemeMode.light;
     } else {
-      setState(() {
-        Themes(context).mode = ThemeMode.dark;
-      });
+      Themes(context).mode = ThemeMode.dark;
     }
-    setState(() {});
   }
 }

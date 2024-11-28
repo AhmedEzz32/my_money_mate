@@ -22,11 +22,13 @@ class ResponsiveDashBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     Themes(context);
     return AnimatedBuilder(
-      animation: SettingService(),
+      animation: Listenable.merge([SettingService(), Themes(context)]),
       builder: (context, _) {
         return MaterialApp(
           navigatorKey: navigatorKey,
           theme: Themes(context).appTheme,
+          darkTheme: Themes(context).appTheme,
+          themeMode: Themes(context).mode,
           locale: SettingService().language.locale,
           localizationsDelegates: const [
             S.delegate,

@@ -11,20 +11,15 @@ class Themes extends ChangeNotifier {
   static const String kThemeColorPrefKey = 'theme_color';
   final BuildContext context;
 
-  Themes(this.context) {
-    initialize();
-  }
 
   ThemeInterface get theme => _theme;
 
   bool get isDark => _mode == ThemeMode.dark;
 
   void initialize() {
-    if (_instance == null) {
-      _setMode();
-      _theme = DefaultTheme(isDark, context);
-      setSystemSatusDefaultColor();
-    }
+    _setMode();
+    _theme = DefaultTheme(isDark, context);
+    setSystemSatusDefaultColor();
   }
 
   void _setMode() {
@@ -192,7 +187,16 @@ class Themes extends ChangeNotifier {
     }
     return _theme.colors.secondary;
   });
-
+  Themes.init(this.context);
   static Themes? _instance;
-  factory Themes.instance(BuildContext context) => _instance ??= Themes(context);
+  factory Themes(BuildContext context) {
+    if (_instance == null) {
+      _instance = Themes.init(context);
+      Themes(context).initialize();
+    }
+    return _instance!;
+  }
 }
+//   static Themes? _instance;
+//   factory Themes.instance(BuildContext context) => _instance ??= Themes(context);
+// }
