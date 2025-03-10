@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_adaptive_app/utils/globals.dart';
 import 'package:responsive_adaptive_app/utils/services/settings_service.dart';
@@ -38,7 +39,9 @@ class ResponsiveDashBoard extends StatelessWidget {
           ],
           supportedLocales: S.delegate.supportedLocales,
           debugShowCheckedModeBanner: false,
-          home: DashBoardView(),
+          home: DevicePreview(
+            builder: (context) => DashBoardView(),
+          ),
         );
       }
     );

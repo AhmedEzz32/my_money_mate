@@ -1,0 +1,2 @@
+C:/flutter projects/responsive_adaptive_app/android/app/.cxx/RelWithDebInfo/5955p6c1/x86/CMakeFiles/edit_cache.dir
+C:/flutter projects/responsive_adaptive_app/android/app/.cxx/RelWithDebInfo/5955p6c1/x86/CMakeFiles/rebuild_cache.dir

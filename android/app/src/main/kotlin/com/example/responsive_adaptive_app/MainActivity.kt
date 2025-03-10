@@ -1,4 +1,4 @@
-package com.example.responsive_adaptive_app
+package com.ahmed.responsive_adaptive_app
 
 import io.flutter.embedding.android.FlutterActivity
 

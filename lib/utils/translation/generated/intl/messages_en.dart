@@ -22,75 +22,72 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "add_more_details":
-            MessageLookupByLibrary.simpleMessage("Add More Details"),
-        "ahmed_ezz": MessageLookupByLibrary.simpleMessage("Ahmed Ezz"),
-        "all_expenses": MessageLookupByLibrary.simpleMessage("All Expenses"),
-        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
-        "augest_2024": MessageLookupByLibrary.simpleMessage("Augest 2024"),
-        "balance": MessageLookupByLibrary.simpleMessage("Balance"),
-        "cash_deposit": MessageLookupByLibrary.simpleMessage("Cash Deposit"),
-        "cash_withdrawal":
-            MessageLookupByLibrary.simpleMessage("Cash Withdrawal"),
-        "customer_email":
-            MessageLookupByLibrary.simpleMessage("Customer Email"),
-        "customer_name": MessageLookupByLibrary.simpleMessage("Customer Name"),
-        "daily": MessageLookupByLibrary.simpleMessage("Daily"),
-        "dark_mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
-        "dashboard": MessageLookupByLibrary.simpleMessage("Dashboard"),
-        "design_product":
-            MessageLookupByLibrary.simpleMessage("Design Product"),
-        "design_serice": MessageLookupByLibrary.simpleMessage("Design Service"),
-        "design_service":
-            MessageLookupByLibrary.simpleMessage("Design Service"),
-        "dollar_20_129": MessageLookupByLibrary.simpleMessage("\$20.129"),
-        "english": MessageLookupByLibrary.simpleMessage("English"),
-        "expenses": MessageLookupByLibrary.simpleMessage("Expenses"),
-        "income": MessageLookupByLibrary.simpleMessage("Income"),
-        "item_amount": MessageLookupByLibrary.simpleMessage("Item Amount"),
-        "item_name": MessageLookupByLibrary.simpleMessage("Item Name"),
-        "juni_mobile_app":
-            MessageLookupByLibrary.simpleMessage("Juni Mobile App"),
-        "khaled_ezz": MessageLookupByLibrary.simpleMessage("Khaled Ezz"),
-        "landing_page": MessageLookupByLibrary.simpleMessage("Landing Page"),
-        "latest_transactions":
-            MessageLookupByLibrary.simpleMessage("Latest Transactions"),
-        "light_mode": MessageLookupByLibrary.simpleMessage("Light Mode"),
-        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
-        "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
-        "my_card": MessageLookupByLibrary.simpleMessage("My Card"),
-        "my_investment": MessageLookupByLibrary.simpleMessage("My Investment"),
-        "my_transactions":
-            MessageLookupByLibrary.simpleMessage("My Transactions"),
-        "name_card": MessageLookupByLibrary.simpleMessage("Name Card"),
-        "osama_ezz": MessageLookupByLibrary.simpleMessage("Osama Ezz"),
-        "other": MessageLookupByLibrary.simpleMessage("Other"),
-        "payment": MessageLookupByLibrary.simpleMessage("Payment"),
-        "product_royalty":
-            MessageLookupByLibrary.simpleMessage("Product Royalty"),
-        "quick_invoice": MessageLookupByLibrary.simpleMessage("Quick Invoice"),
-        "search": MessageLookupByLibrary.simpleMessage("Search"),
-        "see_all": MessageLookupByLibrary.simpleMessage("See All"),
-        "see_less": MessageLookupByLibrary.simpleMessage("See Less"),
-        "send_money": MessageLookupByLibrary.simpleMessage("Send Money"),
-        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
-        "statistics": MessageLookupByLibrary.simpleMessage("Statistics"),
-        "transfer": MessageLookupByLibrary.simpleMessage("Transfer"),
-        "translation_history":
-            MessageLookupByLibrary.simpleMessage("Translation History"),
-        "translation_history_description": MessageLookupByLibrary.simpleMessage(
-            "View the history of all translations"),
-        "type_customer_email":
-            MessageLookupByLibrary.simpleMessage("Type Customer Email"),
-        "type_customer_name":
-            MessageLookupByLibrary.simpleMessage("Type Customer Name"),
-        "type_item_name":
-            MessageLookupByLibrary.simpleMessage("Type Item Name"),
-        "usd": MessageLookupByLibrary.simpleMessage("USD"),
-        "wallet_account":
-            MessageLookupByLibrary.simpleMessage("Wallet Account"),
-        "weekly": MessageLookupByLibrary.simpleMessage("Weekly"),
-        "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
-        "yearly": MessageLookupByLibrary.simpleMessage("Yearly")
-      };
+    "add_more_details": MessageLookupByLibrary.simpleMessage(
+      "Add More Details",
+    ),
+    "ahmed_ezz": MessageLookupByLibrary.simpleMessage("Ahmed Ezz"),
+    "all_expenses": MessageLookupByLibrary.simpleMessage("All Expenses"),
+    "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+    "augest_2024": MessageLookupByLibrary.simpleMessage("Augest 2024"),
+    "balance": MessageLookupByLibrary.simpleMessage("Balance"),
+    "cash_deposit": MessageLookupByLibrary.simpleMessage("Cash Deposit"),
+    "cash_withdrawal": MessageLookupByLibrary.simpleMessage("Cash Withdrawal"),
+    "customer_email": MessageLookupByLibrary.simpleMessage("Customer Email"),
+    "customer_name": MessageLookupByLibrary.simpleMessage("Customer Name"),
+    "daily": MessageLookupByLibrary.simpleMessage("Daily"),
+    "dark_mode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+    "dashboard": MessageLookupByLibrary.simpleMessage("Dashboard"),
+    "design_product": MessageLookupByLibrary.simpleMessage("Design Product"),
+    "design_serice": MessageLookupByLibrary.simpleMessage("Design Service"),
+    "design_service": MessageLookupByLibrary.simpleMessage("Design Service"),
+    "dollar_20_129": MessageLookupByLibrary.simpleMessage("\$20.129"),
+    "english": MessageLookupByLibrary.simpleMessage("English"),
+    "expenses": MessageLookupByLibrary.simpleMessage("Expenses"),
+    "income": MessageLookupByLibrary.simpleMessage("Income"),
+    "item_amount": MessageLookupByLibrary.simpleMessage("Item Amount"),
+    "item_name": MessageLookupByLibrary.simpleMessage("Item Name"),
+    "juni_mobile_app": MessageLookupByLibrary.simpleMessage("Juni Mobile App"),
+    "khaled_ezz": MessageLookupByLibrary.simpleMessage("Khaled Ezz"),
+    "landing_page": MessageLookupByLibrary.simpleMessage("Landing Page"),
+    "latest_transactions": MessageLookupByLibrary.simpleMessage(
+      "Latest Transactions",
+    ),
+    "light_mode": MessageLookupByLibrary.simpleMessage("Light Mode"),
+    "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+    "monthly": MessageLookupByLibrary.simpleMessage("Monthly"),
+    "my_card": MessageLookupByLibrary.simpleMessage("My Card"),
+    "my_investment": MessageLookupByLibrary.simpleMessage("My Investment"),
+    "my_transactions": MessageLookupByLibrary.simpleMessage("My Transactions"),
+    "name_card": MessageLookupByLibrary.simpleMessage("Name Card"),
+    "osama_ezz": MessageLookupByLibrary.simpleMessage("Osama Ezz"),
+    "other": MessageLookupByLibrary.simpleMessage("Other"),
+    "payment": MessageLookupByLibrary.simpleMessage("Payment"),
+    "product_royalty": MessageLookupByLibrary.simpleMessage("Product Royalty"),
+    "quick_invoice": MessageLookupByLibrary.simpleMessage("Quick Invoice"),
+    "search": MessageLookupByLibrary.simpleMessage("Search"),
+    "see_all": MessageLookupByLibrary.simpleMessage("See All"),
+    "see_less": MessageLookupByLibrary.simpleMessage("See Less"),
+    "send_money": MessageLookupByLibrary.simpleMessage("Send Money"),
+    "settings": MessageLookupByLibrary.simpleMessage("Settings"),
+    "statistics": MessageLookupByLibrary.simpleMessage("Statistics"),
+    "transfer": MessageLookupByLibrary.simpleMessage("Transfer"),
+    "translation_history": MessageLookupByLibrary.simpleMessage(
+      "Translation History",
+    ),
+    "translation_history_description": MessageLookupByLibrary.simpleMessage(
+      "View the history of all translations",
+    ),
+    "type_customer_email": MessageLookupByLibrary.simpleMessage(
+      "Type Customer Email",
+    ),
+    "type_customer_name": MessageLookupByLibrary.simpleMessage(
+      "Type Customer Name",
+    ),
+    "type_item_name": MessageLookupByLibrary.simpleMessage("Type Item Name"),
+    "usd": MessageLookupByLibrary.simpleMessage("USD"),
+    "wallet_account": MessageLookupByLibrary.simpleMessage("Wallet Account"),
+    "weekly": MessageLookupByLibrary.simpleMessage("Weekly"),
+    "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
+    "yearly": MessageLookupByLibrary.simpleMessage("Yearly"),
+  };
 }
