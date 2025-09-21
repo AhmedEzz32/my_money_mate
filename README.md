@@ -43,4 +43,10 @@ The app implements a sophisticated theme architecture:
 ### UI Design
 The UI design follows modern Material Design 3 principles with responsive layouts. The dashboard displays financial data with clean visual hierarchy, interactive charts with smooth animations, and consistent spacing throughout all screen sizes. Custom gesture detectors enhance user interaction while maintaining accessibility standards.
 
+<img width="239" height="461" alt="Screenshot 2025-09-21 152641" src="https://github.com/user-attachments/assets/8826c3dc-6576-481e-9d45-ce450e7e2c5b" />
+<img width="329" height="454" alt="Screenshot 2025-09-21 152711" src="https://github.com/user-attachments/assets/97b041ed-1f6f-4b08-a2ba-8886c27ea41a" />
+<img width="545" height="342" alt="Screenshot 2025-09-21 152606" src="https://github.com/user-attachments/assets/b0ebdc14-136a-4fe8-9409-e1c2d9f8761f" />
+<img width="262" height="460" alt="Screenshot 2025-09-21 152736" src="https://github.com/user-attachments/assets/8f4cdce1-7cfa-4a7c-84df-cc1cb0801213" />
+<img width="338" height="456" alt="Screenshot 2025-09-21 152842" src="https://github.com/user-attachments/assets/b6ef6d8b-fd7a-438b-b9c3-83f0ad211259" />
+<img width="217" height="461" alt="Screenshot 2025-09-21 152933" src="https://github.com/user-attachments/assets/8f9edd97-7402-4bdd-b563-0fbcf2767d1d" />
 
